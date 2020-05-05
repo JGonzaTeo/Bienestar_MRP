@@ -49,6 +49,12 @@
     <Compile Include="Consultas\Consulta_pedidos.Designer.cs">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_Mantprueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mantprueba.Designer.cs">
+      <DependentUpon>Frm_Mantprueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIMRP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Rpt_prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Rpt_prueba.Designer.cs">
+      <DependentUpon>Rpt_prueba.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Logica_MRP\Capa_Logica_MRP.csproj">
@@ -69,10 +81,7 @@
       <Name>Capa_Logica_MRP</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mantenimientos\" />
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Consultas\Consulta_pedidos.resx">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
