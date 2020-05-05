@@ -1,0 +1,6 @@
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.pdb

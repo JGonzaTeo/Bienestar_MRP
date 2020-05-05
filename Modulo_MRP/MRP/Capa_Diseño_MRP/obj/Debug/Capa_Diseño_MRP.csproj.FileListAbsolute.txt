@@ -1,0 +1,15 @@
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.pdb
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Logica_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Logica_MRP.pdb
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Consultas.Consulta_pedidos.resources
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.MDIMRP.resources
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Procesos.FrmOrden_Produccion.resources
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.CopyComplete
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.dll
+C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.pdb
