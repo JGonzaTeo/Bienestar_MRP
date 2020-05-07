@@ -593,8 +593,8 @@ DROP TABLE IF EXISTS `estacion`;
 CREATE TABLE `estacion` (
   `pkidestacion` int(11) NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
-  `estado` tinyint(2) DEFAULT NULL,
   `pkcodigoempleado` int(11) DEFAULT NULL,
+  `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidestacion`),
   KEY `fk_estacion_empleado1_idx` (`pkcodigoempleado`),
   CONSTRAINT `fk_estacion_empleado1` FOREIGN KEY (`pkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -620,7 +620,8 @@ DROP TABLE IF EXISTS `estandardecalidad`;
 CREATE TABLE `estandardecalidad` (
   `pkidestandardecalidad` int(11) NOT NULL,
   `categoria` varchar(45) DEFAULT NULL,
-  `descripcion` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(90) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidestandardecalidad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -754,31 +755,81 @@ LOCK TABLES `formaspago` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `formula`
+-- Table structure for table `formula_detalle`
 --
 
-DROP TABLE IF EXISTS `formula`;
+DROP TABLE IF EXISTS `formula_detalle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `formula` (
-  `pkidformula` int(11) NOT NULL,
-  `producto_fabricar` int(11) DEFAULT NULL,
+CREATE TABLE `formula_detalle` (
+  `pkidformulaencabezado` int(11) NOT NULL,
+  `linea` int(11) NOT NULL,
   `pkidProducto` int(11) DEFAULT NULL,
   `cantidad` double DEFAULT NULL,
+  `medida` varchar(45) DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
-  PRIMARY KEY (`pkidformula`),
-  KEY `fk_formula_producto1_idx` (`pkidProducto`),
-  CONSTRAINT `fk_formula_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`linea`,`pkidformulaencabezado`),
+  KEY `fk_formula_detalle_formula_encabezado1_idx` (`pkidformulaencabezado`),
+  CONSTRAINT `fk_formula_detalle_formula_encabezado1` FOREIGN KEY (`pkidformulaencabezado`) REFERENCES `formula_encabezado` (`pkidformulaencabezado`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `formula`
+-- Dumping data for table `formula_detalle`
 --
 
-LOCK TABLES `formula` WRITE;
-/*!40000 ALTER TABLE `formula` DISABLE KEYS */;
-/*!40000 ALTER TABLE `formula` ENABLE KEYS */;
+LOCK TABLES `formula_detalle` WRITE;
+/*!40000 ALTER TABLE `formula_detalle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `formula_detalle` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `formula_encabezado`
+--
+
+DROP TABLE IF EXISTS `formula_encabezado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `formula_encabezado` (
+  `pkidformulaencabezado` int(11) NOT NULL,
+  `pkidProducto` int(11) DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  `estado` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`pkidformulaencabezado`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `formula_encabezado`
+--
+
+LOCK TABLES `formula_encabezado` WRITE;
+/*!40000 ALTER TABLE `formula_encabezado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `formula_encabezado` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gastos_indirectos`
+--
+
+DROP TABLE IF EXISTS `gastos_indirectos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gastos_indirectos` (
+  `pkidgastos_indirectos` int(11) NOT NULL,
+  `nombre` varchar(45) DEFAULT NULL,
+  `valor` double DEFAULT NULL,
+  PRIMARY KEY (`pkidgastos_indirectos`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gastos_indirectos`
+--
+
+LOCK TABLES `gastos_indirectos` WRITE;
+/*!40000 ALTER TABLE `gastos_indirectos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gastos_indirectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -792,6 +843,7 @@ CREATE TABLE `horasextras` (
   `pkcodigohorasextras` int(11) NOT NULL AUTO_INCREMENT,
   `fkcodigoempleado` int(11) NOT NULL,
   `cantidad` varchar(45) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkcodigohorasextras`),
   KEY `fk_horasextras_empleado1_idx` (`fkcodigoempleado`),
@@ -822,7 +874,7 @@ CREATE TABLE `impuestos` (
   `valor` double DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidImpuesto`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -879,7 +931,7 @@ CREATE TABLE `kpi` (
   KEY `fk_kpi_empleado1_idx` (`fkcodempleado`),
   CONSTRAINT `fk_kpi_empleado1` FOREIGN KEY (`fkcodempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_kpi_meta1` FOREIGN KEY (`fkcodigo_meta`) REFERENCES `meta` (`pkcodigo_meta`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1017,7 +1069,7 @@ CREATE TABLE `meta` (
   `puntaje` varchar(45) DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkcodigo_meta`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1045,7 +1097,7 @@ CREATE TABLE `movimiento_detalle` (
   KEY `fk_movimiento_detalle_movimiento_general1_idx` (`pkidmovimiento_general`),
   CONSTRAINT `fk_movimiento_detalle_movimiento_encabezado1` FOREIGN KEY (`pkidMovimiento`) REFERENCES `movimiento_encabezado` (`pkidMovimiento`),
   CONSTRAINT `fk_movimiento_detalle_movimiento_general1` FOREIGN KEY (`pkidmovimiento_general`) REFERENCES `movimiento_general` (`pkidmovimiento_general`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1127,7 +1179,7 @@ CREATE TABLE `movimiento_general` (
   PRIMARY KEY (`pkidmovimiento_general`),
   KEY `fk_movimiento_general_producto1_idx` (`pkidProducto`),
   CONSTRAINT `fk_movimiento_general_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1242,7 +1294,7 @@ CREATE TABLE `ordencompradetalle` (
   KEY `fk_ordenCompraDetalle_producto1_idx` (`fkIdProducto`),
   CONSTRAINT `fk_ordenCompraDetalle_ordenComrpaEncabezado1` FOREIGN KEY (`fkIdordenCompraEncabezado`) REFERENCES `ordencomrpaencabezado` (`pkIdOrdenCompraEncabezado`),
   CONSTRAINT `fk_ordenCompraDetalle_producto1` FOREIGN KEY (`fkIdProducto`) REFERENCES `producto` (`pkidProducto`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1398,7 +1450,7 @@ CREATE TABLE `poliza_detalle` (
   PRIMARY KEY (`cod_linea`,`pkcodigopoliza`),
   KEY `fk_poliza_detalle_poliza_encabezado1` (`pkcodigopoliza`),
   CONSTRAINT `fk_poliza_detalle_poliza_encabezado1` FOREIGN KEY (`pkcodigopoliza`) REFERENCES `poliza_encabezado` (`pkcodigopoliza`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1453,7 +1505,9 @@ CREATE TABLE `polizadetalle_mrp` (
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`cod_linea`,`pkidpolizaencabezado_MRP`),
   KEY `fk_polizadetalle_MRP_cuentas_contable1_idx` (`pkcodigocuenta`),
-  CONSTRAINT `fk_polizadetalle_MRP_cuentas_contable1` FOREIGN KEY (`pkcodigocuenta`) REFERENCES `cuentas_contable` (`pkcodigocuenta`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_polizadetalle_mrp_polizaencabezado_mrp1_idx` (`pkidpolizaencabezado_MRP`),
+  CONSTRAINT `fk_polizadetalle_MRP_cuentas_contable1` FOREIGN KEY (`pkcodigocuenta`) REFERENCES `cuentas_contable` (`pkcodigocuenta`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_polizadetalle_mrp_polizaencabezado_mrp1` FOREIGN KEY (`pkidpolizaencabezado_MRP`) REFERENCES `polizaencabezado_mrp` (`pkidpolizaencabezado_MRP`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1478,6 +1532,7 @@ CREATE TABLE `polizaencabezado_mrp` (
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
+  `tipo` varchar(45) DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidpolizaencabezado_MRP`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1739,7 +1794,7 @@ CREATE TABLE `ruta` (
   `descripcion` varchar(45) DEFAULT NULL,
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkidruta`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1820,7 +1875,7 @@ CREATE TABLE `tbl_bancotalento` (
   PRIMARY KEY (`pkBancoTalento`,`fkCurriculum`),
   KEY `FK_Curriculum_BancoT` (`fkCurriculum`),
   CONSTRAINT `FK_Curriculum_BancoT` FOREIGN KEY (`fkCurriculum`) REFERENCES `tbl_curriculums` (`pkidCurriculum`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2077,7 +2132,7 @@ CREATE TABLE `tipotransporte` (
   `capacidad` float DEFAULT NULL,
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkidtipotransporte`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2109,7 +2164,7 @@ CREATE TABLE `transporte` (
   KEY `fk_transporte_tipotransporte1_idx` (`fkidtipotransporte`),
   CONSTRAINT `fk_transporte_ruta1` FOREIGN KEY (`fkidruta`) REFERENCES `ruta` (`pkidruta`),
   CONSTRAINT `fk_transporte_tipotransporte1` FOREIGN KEY (`fkidtipotransporte`) REFERENCES `tipotransporte` (`pkidtipotransporte`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2139,7 +2194,7 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`pkusuario`,`pktipousuario`),
   KEY `fk_usuario_tipo_usuario1_idx` (`pktipousuario`),
   CONSTRAINT `fk_usuario_tipo_usuario1` FOREIGN KEY (`pktipousuario`) REFERENCES `tipo_usuario` (`pktipousuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2192,4 +2247,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-06  1:39:15
+-- Dump completed on 2020-05-07  3:26:25
