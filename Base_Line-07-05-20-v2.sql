@@ -1837,6 +1837,35 @@ LOCK TABLES `sancionempleado` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `solicitudactivos`
+--
+
+DROP TABLE IF EXISTS `solicitudactivos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `solicitudactivos` (
+  `pkidsolicitudactivos` int(11) NOT NULL,
+  `cantidad` double DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  `pkidProducto` int(11) DEFAULT NULL,
+  `fechadesolicitud` date DEFAULT NULL,
+  `estado` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`pkidsolicitudactivos`),
+  KEY `fk_solicitudactivos_producto1_idx` (`pkidProducto`),
+  CONSTRAINT `fk_solicitudactivos_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `solicitudactivos`
+--
+
+LOCK TABLES `solicitudactivos` WRITE;
+/*!40000 ALTER TABLE `solicitudactivos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `solicitudactivos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sucursal`
 --
 
@@ -2247,4 +2276,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-07  3:26:25
+-- Dump completed on 2020-05-07 11:11:22
