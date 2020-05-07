@@ -58,9 +58,9 @@
             this.Pnl_nombreForm.Controls.Add(this.label1);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
             this.Pnl_nombreForm.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(1158, 65);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(868, 53);
             this.Pnl_nombreForm.TabIndex = 74;
             // 
             // Lbl_idapp
@@ -68,9 +68,10 @@
             this.Lbl_idapp.AutoSize = true;
             this.Lbl_idapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_idapp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_idapp.Location = new System.Drawing.Point(21, 15);
+            this.Lbl_idapp.Location = new System.Drawing.Point(16, 12);
+            this.Lbl_idapp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_idapp.Name = "Lbl_idapp";
-            this.Lbl_idapp.Size = new System.Drawing.Size(62, 25);
+            this.Lbl_idapp.Size = new System.Drawing.Size(50, 20);
             this.Lbl_idapp.TabIndex = 10;
             this.Lbl_idapp.Text = "302 -";
             // 
@@ -79,10 +80,10 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(1011, 13);
-            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ayuda.Location = new System.Drawing.Point(758, 11);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
             this.btn_Ayuda.TabIndex = 6;
             this.btn_Ayuda.UseVisualStyleBackColor = true;
             // 
@@ -91,10 +92,10 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(962, 13);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(722, 11);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
             this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
@@ -104,9 +105,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 17);
+            this.label1.Location = new System.Drawing.Point(68, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 25);
+            this.label1.Size = new System.Drawing.Size(174, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "LISTA DE PEDIDOS";
             // 
@@ -115,10 +117,10 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(1061, 13);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(796, 11);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
@@ -127,26 +129,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 92);
+            this.label2.Location = new System.Drawing.Point(72, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 20);
+            this.label2.Size = new System.Drawing.Size(139, 17);
             this.label2.TabIndex = 75;
             this.label2.Text = "Orden de compra:";
             // 
             // Txt_ordenprod
             // 
-            this.Txt_ordenprod.Location = new System.Drawing.Point(271, 92);
+            this.Txt_ordenprod.Location = new System.Drawing.Point(203, 75);
+            this.Txt_ordenprod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_ordenprod.Name = "Txt_ordenprod";
-            this.Txt_ordenprod.Size = new System.Drawing.Size(593, 22);
+            this.Txt_ordenprod.Size = new System.Drawing.Size(446, 20);
             this.Txt_ordenprod.TabIndex = 76;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(870, 88);
+            this.button1.Location = new System.Drawing.Point(652, 72);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.Size = new System.Drawing.Size(56, 24);
             this.button1.TabIndex = 77;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,11 +167,12 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.Dgv_consulta.Location = new System.Drawing.Point(26, 151);
+            this.Dgv_consulta.Location = new System.Drawing.Point(20, 123);
+            this.Dgv_consulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dgv_consulta.Name = "Dgv_consulta";
             this.Dgv_consulta.RowHeadersWidth = 51;
             this.Dgv_consulta.RowTemplate.Height = 24;
-            this.Dgv_consulta.Size = new System.Drawing.Size(1079, 276);
+            this.Dgv_consulta.Size = new System.Drawing.Size(809, 224);
             this.Dgv_consulta.TabIndex = 78;
             // 
             // Column1
@@ -213,15 +219,16 @@
             // 
             // Consulta_pedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 449);
+            this.ClientSize = new System.Drawing.Size(838, 365);
             this.Controls.Add(this.Dgv_consulta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Txt_ordenprod);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Consulta_pedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta_pedidos";

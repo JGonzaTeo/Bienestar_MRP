@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Capa_Datos_MRP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -43,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\Consulta_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Consulta_Empleado.Designer.cs">
+      <DependentUpon>Consulta_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Consulta_HorasExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Consulta_HorasExtras.Designer.cs">
+      <DependentUpon>Consulta_HorasExtras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\Consulta_pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +71,12 @@
     <Compile Include="Mantenimientos\Frm_Mantprueba.Designer.cs">
       <DependentUpon>Frm_Mantprueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Mant_HorasExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Mant_HorasExtras.Designer.cs">
+      <DependentUpon>Mant_HorasExtras.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIMRP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +88,12 @@
     </Compile>
     <Compile Include="Procesos\FrmOrden_Produccion.Designer.cs">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_Poliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_Poliza.Designer.cs">
+      <DependentUpon>Frm_Poliza.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\Rpt_prueba.cs">
@@ -83,14 +111,26 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Consultas\Consulta_Empleado.resx">
+      <DependentUpon>Consulta_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Consulta_HorasExtras.resx">
+      <DependentUpon>Consulta_HorasExtras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Consulta_pedidos.resx">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Mant_HorasExtras.resx">
+      <DependentUpon>Mant_HorasExtras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIMRP.resx">
       <DependentUpon>MDIMRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\FrmOrden_Produccion.resx">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Poliza.resx">
+      <DependentUpon>Frm_Poliza.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
