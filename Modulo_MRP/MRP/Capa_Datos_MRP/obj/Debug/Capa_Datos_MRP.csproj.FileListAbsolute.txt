@@ -4,3 +4,9 @@ C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.cs
 C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csproj.CoreCompileInputs.cache
 C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.dll
 C:\Users\prueb\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.pdb
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csprojAssemblyReference.cache
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.dll
+C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.pdb

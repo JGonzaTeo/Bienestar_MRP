@@ -1,4 +1,6 @@
 ﻿using Capa_Diseño_MRP.Consultas;
+using Capa_Diseño_MRP.Mantenimientos;
+using Capa_Diseño_MRP.Procesos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -133,6 +135,52 @@ namespace Capa_Diseño_MRP
             else
             {
                 listaproductos.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaHorasExtra = false;
+        Mant_HorasExtras horasextra = new Mant_HorasExtras();
+        private void horasExtrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Mant_HorasExtras);
+            if (ventanaHorasExtra == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    horasextra = new Mant_HorasExtras();
+                }
+
+                horasextra.MdiParent = this;
+                horasextra.Show();
+                Application.DoEvents();
+                ventanaHorasExtra = true;
+            }
+            else
+            {
+                horasextra.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaPoliza = false;
+        Frm_Poliza poliza = new Frm_Poliza();
+        private void pólizaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Poliza);
+            if (ventanaPoliza == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    poliza = new Frm_Poliza();
+                }
+
+                poliza.MdiParent = this;
+                poliza.Show();
+                Application.DoEvents();
+                ventanaPoliza = true;
+            }
+            else
+            {
+                poliza.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }
