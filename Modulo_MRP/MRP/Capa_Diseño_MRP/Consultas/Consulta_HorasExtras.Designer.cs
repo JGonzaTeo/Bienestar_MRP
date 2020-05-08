@@ -38,8 +38,9 @@
             this.Dgv_consultaHorasExtras = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consultaHorasExtras)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.Pnl_nombreForm.Location = new System.Drawing.Point(0, 0);
             this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(601, 53);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(688, 53);
             this.Pnl_nombreForm.TabIndex = 75;
             // 
             // btn_minimizar
@@ -61,7 +62,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(469, 12);
+            this.btn_minimizar.Location = new System.Drawing.Point(562, 10);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
@@ -86,7 +87,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(543, 12);
+            this.btn_cerrar.Location = new System.Drawing.Point(636, 10);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
@@ -102,7 +103,7 @@
             this.Btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_actualizar.Location = new System.Drawing.Point(453, 145);
+            this.Btn_actualizar.Location = new System.Drawing.Point(543, 145);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(123, 33);
@@ -119,7 +120,7 @@
             this.Btn_seleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_seleccionar.Location = new System.Drawing.Point(453, 202);
+            this.Btn_seleccionar.Location = new System.Drawing.Point(543, 202);
             this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_seleccionar.Name = "Btn_seleccionar";
             this.Btn_seleccionar.Size = new System.Drawing.Size(123, 33);
@@ -138,8 +139,9 @@
             this.Dgv_consultaHorasExtras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Empleado,
+            this.Cantidad,
             this.Fecha,
-            this.Cantidad});
+            this.Estado});
             this.Dgv_consultaHorasExtras.Location = new System.Drawing.Point(22, 75);
             this.Dgv_consultaHorasExtras.Margin = new System.Windows.Forms.Padding(2);
             this.Dgv_consultaHorasExtras.Name = "Dgv_consultaHorasExtras";
@@ -147,7 +149,7 @@
             this.Dgv_consultaHorasExtras.RowHeadersWidth = 51;
             this.Dgv_consultaHorasExtras.RowTemplate.Height = 24;
             this.Dgv_consultaHorasExtras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_consultaHorasExtras.Size = new System.Drawing.Size(405, 241);
+            this.Dgv_consultaHorasExtras.Size = new System.Drawing.Size(503, 241);
             this.Dgv_consultaHorasExtras.TabIndex = 89;
             // 
             // Codigo
@@ -160,21 +162,26 @@
             this.Empleado.HeaderText = "Empleado";
             this.Empleado.Name = "Empleado";
             // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
             // Consulta_HorasExtras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 337);
+            this.ClientSize = new System.Drawing.Size(683, 337);
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consultaHorasExtras);
@@ -201,7 +208,8 @@
         public System.Windows.Forms.DataGridView Dgv_consultaHorasExtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

@@ -51,6 +51,23 @@ namespace Capa_Datos_MRP
             }
         }
 
+        public OdbcDataReader consultaayudas(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consultaGraAsis = " select * from ayudas where pkcodigoayuda =" + id + ";";
+                comm = new OdbcCommand(consultaGraAsis, cn.conexionbd());
+                OdbcDataReader mostrarResultados = comm.ExecuteReader();
+                return mostrarResultados;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
         //----- Conny
         //----- CONSULTAR
         public OdbcDataReader consultarHoraExtra()
@@ -58,7 +75,25 @@ namespace Capa_Datos_MRP
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT * FROM horasextras WHERE estado = 1 ;";
+                string consulta = "SELECT * FROM mydb.horasextras WHERE estado = '1' ;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //----- CONSULTAR
+        public OdbcDataReader consultarCuentasContables()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT * FROM cuentas_contable WHERE debe_haber = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -148,10 +183,151 @@ namespace Capa_Datos_MRP
                 Console.WriteLine(err.Message);
                 return null;
             }
-
-            
-
-            //----- Freddy
         }
+
+        //----- Freddy
+
+        public OdbcDataReader totalmateria()
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "select sum(costototal) from mydb.costodefabricacion;";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+
+
+            public OdbcDataReader sumasiguales(string numero)
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "select sum(debe) from mydb.polizadetalle_mrp where pkidpolizaencabezado_MRP= '" + numero + "' ;";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+            public OdbcDataReader mostrarsueldo()
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "SELECT SUM(sueldo) From puesto where fkcodigodepto = '1';";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+
+            public OdbcDataReader mostrarhoras()
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "select sum(cantidad) from horasextras;";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+            public OdbcDataReader mostrarcuentas()
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "SELECT * FROM cuentas_contable;";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+
+
+            public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, int pkcodigocuenta, string debe, string haber)
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "insert into polizadetalle_mrp values(' '," + pkidpolizaencabezado_MRP + ", '" + pkcodigocuenta + "' ,'" + debe + "','" + haber + "','1');";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+
+            public string Obtenerfinal(string tabla, string campo)
+            {
+                String camporesultante = "";
+                try
+                {
+                    string sql = "SELECT MAX(" + campo + "+1) FROM " + tabla + ";"; //SELECT MAX(idFuncion) FROM `funciones`     
+                    OdbcCommand command = new OdbcCommand(sql, cn.conexionbd());
+                    OdbcDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    camporesultante = reader.GetValue(0).ToString();
+                    Console.WriteLine("El resultado es: " + camporesultante);
+                    if (String.IsNullOrEmpty(camporesultante))
+                        camporesultante = "1";
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine(camporesultante);
+                }
+                return camporesultante;
+            }
+
+
+            public OdbcDataReader Insertarencabezado(string pkidpolizaencabezado_MRP, string fecha_inicio, string fecha_fin, string Descripcion)
+            {
+                try
+                {
+                    cn.conexionbd();
+                    string consulta = "insert into polizaencabezado_mrp values(" + pkidpolizaencabezado_MRP + ", '" + fecha_inicio + "' ,'" + fecha_fin + "','" + Descripcion + "','COSTOS','1');";
+                    comm = new OdbcCommand(consulta, cn.conexionbd());
+                    OdbcDataReader mostrar = comm.ExecuteReader();
+                    return mostrar;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                    return null;
+                }
+            }
+
+
     }
 }

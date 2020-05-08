@@ -12,13 +12,14 @@ using System.Data.Odbc;
 
 namespace Capa_Diseño_MRP.Consultas
 {
-    public partial class Consulta_HorasExtras : Form
+    public partial class Consulta_CuentasContables : Form
     {
         LFCMRP logic = new LFCMRP();
-        public Consulta_HorasExtras()
+        public Consulta_CuentasContables()
         {
             InitializeComponent();
-           
+
+            Dgv_consultaCuentasContables.Rows.Clear();
             MostrarConsulta();
         }
 
@@ -34,12 +35,12 @@ namespace Capa_Diseño_MRP.Consultas
 
         public void MostrarConsulta()
         {
-            OdbcDataReader mostrarDatos = logic.ConsultaHoraExtra();
+            OdbcDataReader mostrarDatos = logic.ConsultaCuentasContables();
             try
             {
                 while (mostrarDatos.Read())
                 {
-                    Dgv_consultaHorasExtras.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3), mostrarDatos.GetString(4));
+                    Dgv_consultaCuentasContables.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3));
                 }
             }
             catch (Exception err)
@@ -50,13 +51,13 @@ namespace Capa_Diseño_MRP.Consultas
 
         private void Btn_actualizar_Click(object sender, EventArgs e)
         {
-            Dgv_consultaHorasExtras.Rows.Clear();
+            Dgv_consultaCuentasContables.Rows.Clear();
             MostrarConsulta();
         }
 
         private void Btn_seleccionar_Click(object sender, EventArgs e)
         {
-            if (Dgv_consultaHorasExtras.Rows.Count == 0)
+            if (Dgv_consultaCuentasContables.Rows.Count == 0)
             {
                 return;
             }
