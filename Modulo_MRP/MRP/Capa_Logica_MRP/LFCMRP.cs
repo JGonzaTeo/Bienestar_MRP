@@ -23,6 +23,11 @@ namespace Capa_Logica_MRP
             return sn.insertarbitacora(sCodigo, sip, Smac, susuario, sdepartamento, sfechahora, saccion, sformulario);
         }
 
+        public OdbcDataReader consultaayuda(string id)
+        {
+            return sn.consultaayudas(id);
+        }
+
         public OdbcDataReader Insertar(string[] datos)
         {
             return sn.Insertar(datos);
@@ -41,6 +46,44 @@ namespace Capa_Logica_MRP
         public OdbcDataReader ConsultaHoraExtra()
         {
             return sn.consultarHoraExtra();
+        }
+
+        public OdbcDataReader ConsultaCuentasContables()
+        {
+            return sn.consultarCuentasContables();
+        }
+        public OdbcDataReader Insertarencabezado(string pkidpolizaencabezado_MRP, string fecha_inicio, string fecha_fin, string Descripcion)
+        {
+            return sn.Insertarencabezado(pkidpolizaencabezado_MRP, fecha_inicio, fecha_fin, Descripcion);
+        }
+        public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, string pkcodigocuenta, string debe, string haber)
+        {
+            return sn.Insertardetalle(pkidpolizaencabezado_MRP, pkcodigocuenta, debe, haber);
+        }
+        public OdbcDataReader sueldobase()
+        {
+            return sn.mostrarsueldo();
+        }
+        public OdbcDataReader horasextras()
+        {
+            return sn.mostrarhoras();
+        }
+        public OdbcDataReader mostrarcuenta()
+        {
+            return sn.mostrarcuentas();
+        }
+        public OdbcDataReader materiaprima()
+        {
+            return sn.totalmateria();
+        }
+        public OdbcDataReader iguales(string numero)
+        {
+            return sn.sumasiguales(numero);
+        }
+        public string Siguiente(string tabla, string campo)
+        {
+            string llave = sn.Obtenerfinal(tabla, campo);
+            return llave;
         }
     }
 }
