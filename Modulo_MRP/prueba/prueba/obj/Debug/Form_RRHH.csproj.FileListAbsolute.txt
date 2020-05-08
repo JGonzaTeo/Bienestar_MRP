@@ -380,3 +380,20 @@ C:\Users\prueb\Desktop\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Diseño_MRP.pdb
 C:\Users\prueb\Desktop\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Logica_MRP.pdb
 C:\Users\prueb\Desktop\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Datos_MRP.pdb
 C:\Users\prueb\Desktop\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\prueba.exe.config
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\prueba.exe
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\prueba.pdb
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Diseño_MRP.dll
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Logica_MRP.dll
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Diseño_MRP.pdb
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Logica_MRP.pdb
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.Form1.resources
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.Properties.Resources.resources
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.GenerateResource.cache
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.exe
+C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.pdb

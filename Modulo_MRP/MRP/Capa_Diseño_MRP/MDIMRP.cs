@@ -1,4 +1,6 @@
 ﻿using Capa_Diseño_MRP.Consultas;
+using Capa_Diseño_MRP.Mantenimientos;
+using Capa_Diseño_MRP.Procesos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -133,6 +135,122 @@ namespace Capa_Diseño_MRP
             else
             {
                 listaproductos.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaEstandar = false;
+        Frm_Mant_EstandarCalidad estandar = new Frm_Mant_EstandarCalidad();
+        private void EstandarDeCalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Mant_EstandarCalidad);
+            if (ventanaEstandar == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    estandar = new Frm_Mant_EstandarCalidad();
+                }
+
+                estandar.MdiParent = this;
+                estandar.Show();
+                Application.DoEvents();
+                ventanaEstandar = true;
+            }
+            else
+            {
+                estandar.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+        bool ventanaEstacion = false;
+        Frm_Mant_Estacion estacion = new Frm_Mant_Estacion();
+        private void EstacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Mant_Estacion);
+            if (ventanaEstacion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    estacion = new Frm_Mant_Estacion();
+                }
+
+                estacion.MdiParent = this;
+                estacion.Show();
+                Application.DoEvents();
+                ventanaEstacion = true;
+            }
+            else
+            {
+                estacion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+
+        bool ventanaCostosP = false;
+        Frm_Costos_Produccion costosP = new Frm_Costos_Produccion();
+        private void CostosDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Costos_Produccion);
+            if (ventanaCostosP == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    costosP = new Frm_Costos_Produccion();
+                }
+
+                costosP.MdiParent = this;
+                costosP.Show();
+                Application.DoEvents();
+                ventanaCostosP = true;
+            }
+            else
+            {
+                costosP.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaGastos = false;
+        Frm_Mant_Gastos gastos = new Frm_Mant_Gastos();
+        private void GastosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Mant_Gastos);
+            if (ventanaGastos == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    gastos = new Frm_Mant_Gastos();
+                }
+
+                gastos.MdiParent = this;
+                gastos.Show();
+                Application.DoEvents();
+                ventanaGastos = true;
+            }
+            else
+            {
+                gastos.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+        bool ventanaCProduccion = false;
+        Frm_Consulta_Costos Cproduccion = new Frm_Consulta_Costos();
+        private void ConsultaCostosDeFabricacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Consulta_Costos);
+            if (ventanaCProduccion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    Cproduccion = new Frm_Consulta_Costos();
+                }
+
+                Cproduccion.MdiParent = this;
+                Cproduccion.Show();
+                Application.DoEvents();
+                ventanaCProduccion = true;
+            }
+            else
+            {
+                Cproduccion.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }
