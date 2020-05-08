@@ -32,3 +32,24 @@ C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.CopyComplete
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.dll
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Logica_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Logica_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Consultas.Consulta_Empleado.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Consultas.Consulta_HorasExtras.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Consultas.Consulta_pedidos.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Mantenimientos.Mant_HorasExtras.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.MDIMRP.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Procesos.FrmOrden_Produccion.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Procesos.Frm_Poliza.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.GenerateResource.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.csproj.CopyComplete
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Consultas.Consulta_CuentasContables.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\MRP\Capa_Diseño_MRP\obj\Debug\Capa_Diseño_MRP.Mantenimientos.Frm_MantCuentasContables.resources

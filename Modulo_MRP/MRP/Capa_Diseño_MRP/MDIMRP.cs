@@ -183,5 +183,28 @@ namespace Capa_Diseño_MRP
                 poliza.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
+
+        bool ventanaCuentasContables = false;
+        Frm_MantCuentasContables cuentascontables = new Frm_MantCuentasContables();
+        private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantCuentasContables);
+            if (ventanaCuentasContables == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    cuentascontables = new Frm_MantCuentasContables();
+                }
+
+                cuentascontables.MdiParent = this;
+                cuentascontables.Show();
+                Application.DoEvents();
+                ventanaCuentasContables = true;
+            }
+            else
+            {
+                cuentascontables.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
     }
 }

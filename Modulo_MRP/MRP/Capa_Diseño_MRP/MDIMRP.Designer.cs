@@ -31,7 +31,9 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horasExtrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pólizaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +42,7 @@
             this.lbl_user = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.horasExtrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pólizaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,10 +73,18 @@
             // mantenToolStripMenuItem
             // 
             this.mantenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horasExtrasToolStripMenuItem});
+            this.horasExtrasToolStripMenuItem,
+            this.cuentasContablesToolStripMenuItem});
             this.mantenToolStripMenuItem.Name = "mantenToolStripMenuItem";
             this.mantenToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.mantenToolStripMenuItem.Text = "Mantenimientos";
+            // 
+            // horasExtrasToolStripMenuItem
+            // 
+            this.horasExtrasToolStripMenuItem.Name = "horasExtrasToolStripMenuItem";
+            this.horasExtrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horasExtrasToolStripMenuItem.Text = "Horas Extras";
+            this.horasExtrasToolStripMenuItem.Click += new System.EventHandler(this.horasExtrasToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -84,6 +93,13 @@
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // pólizaToolStripMenuItem
+            // 
+            this.pólizaToolStripMenuItem.Name = "pólizaToolStripMenuItem";
+            this.pólizaToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.pólizaToolStripMenuItem.Text = "Póliza";
+            this.pólizaToolStripMenuItem.Click += new System.EventHandler(this.pólizaToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -150,19 +166,12 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
-            // horasExtrasToolStripMenuItem
+            // cuentasContablesToolStripMenuItem
             // 
-            this.horasExtrasToolStripMenuItem.Name = "horasExtrasToolStripMenuItem";
-            this.horasExtrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.horasExtrasToolStripMenuItem.Text = "Horas Extras";
-            this.horasExtrasToolStripMenuItem.Click += new System.EventHandler(this.horasExtrasToolStripMenuItem_Click);
-            // 
-            // pólizaToolStripMenuItem
-            // 
-            this.pólizaToolStripMenuItem.Name = "pólizaToolStripMenuItem";
-            this.pólizaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pólizaToolStripMenuItem.Text = "Póliza";
-            this.pólizaToolStripMenuItem.Click += new System.EventHandler(this.pólizaToolStripMenuItem_Click);
+            this.cuentasContablesToolStripMenuItem.Name = "cuentasContablesToolStripMenuItem";
+            this.cuentasContablesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasContablesToolStripMenuItem.Text = "Cuentas Contables";
+            this.cuentasContablesToolStripMenuItem.Click += new System.EventHandler(this.cuentasContablesToolStripMenuItem_Click);
             // 
             // MDIMRP
             // 
@@ -202,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem listaDePedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horasExtrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pólizaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasContablesToolStripMenuItem;
     }
 }
 

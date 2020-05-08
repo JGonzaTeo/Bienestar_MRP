@@ -51,6 +51,23 @@ namespace Capa_Datos_MRP
             }
         }
 
+        public OdbcDataReader consultaayudas(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consultaGraAsis = " select * from ayudas where pkcodigoayuda =" + id + ";";
+                comm = new OdbcCommand(consultaGraAsis, cn.conexionbd());
+                OdbcDataReader mostrarResultados = comm.ExecuteReader();
+                return mostrarResultados;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
         //----- Conny
         //----- CONSULTAR
         public OdbcDataReader consultarHoraExtra()
@@ -59,6 +76,24 @@ namespace Capa_Datos_MRP
             {
                 cn.conexionbd();
                 string consulta = "SELECT * FROM horasextras WHERE estado = 1 ;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //----- CONSULTAR
+        public OdbcDataReader consultarCuentasContables()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT * FROM cuentas_contable WHERE debe_haber = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -148,9 +183,7 @@ namespace Capa_Datos_MRP
                 Console.WriteLine(err.Message);
                 return null;
             }
-
             
-
             //----- Freddy
         }
     }

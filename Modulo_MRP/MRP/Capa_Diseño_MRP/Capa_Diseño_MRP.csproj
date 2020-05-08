@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\Consulta_CuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Consulta_CuentasContables.designer.cs">
+      <DependentUpon>Consulta_CuentasContables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\Consulta_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     </Compile>
     <Compile Include="Consultas\Consulta_pedidos.Designer.cs">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCuentasContables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCuentasContables.designer.cs">
+      <DependentUpon>Frm_MantCuentasContables.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Frm_Mantprueba.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Consultas\Consulta_CuentasContables.resx">
+      <DependentUpon>Consulta_CuentasContables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Consulta_Empleado.resx">
       <DependentUpon>Consulta_Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Consulta_pedidos.resx">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantCuentasContables.resx">
+      <DependentUpon>Frm_MantCuentasContables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Mant_HorasExtras.resx">
       <DependentUpon>Mant_HorasExtras.cs</DependentUpon>

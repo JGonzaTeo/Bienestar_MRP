@@ -397,3 +397,20 @@ C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\F
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.exe
 C:\Users\Conny\Desktop\Bienestar_MRP-master\Modulo_MRP\prueba\prueba\obj\Debug\prueba.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\prueba.exe.config
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\prueba.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\prueba.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Diseño_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Logica_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Diseño_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Logica_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\prueba.Form1.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\prueba.Properties.Resources.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.GenerateResource.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\prueba.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\MRP\Bienestar_MRP\Modulo_MRP\prueba\prueba\obj\Debug\prueba.pdb

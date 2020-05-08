@@ -13,34 +13,31 @@ using System.Data.Odbc;
 
 namespace Capa_Diseño_MRP.Mantenimientos
 {
-    public partial class Mant_HorasExtras : Form
+    public partial class Frm_MantCuentasContables : Form
     {
         LFCMRP logic = new LFCMRP();
         string scampo;
-        public Mant_HorasExtras()
+        public Frm_MantCuentasContables()
         {
             InitializeComponent();
-            scampo = logic.siguiente("horasextras", "pkcodigohorasextras");
+            scampo = logic.siguiente("cuentas_contable", "pkcodigocuenta");
             txt_codigo.Text = scampo;
-            DateTime fechaHoy = DateTime.Now;
-            string fechaHE = fechaHoy.ToString("yyyy/MM/dd");
-            Txt_fechaHE.Text = fechaHE;
             bloquearTXT();
         }
 
         void bloquearTXT()
         {
-            TextBox[] txtBox = { txt_codigo, txt_empleado, txt_cantidad, Txt_fechaHE };
+            TextBox[] txtBox = { txt_codigo, txt_nombre, txt_monto, Txt_DebeHaber };
             for (int i = 0; i < txtBox.Length; i++)
             {
                 txtBox[i].Enabled = false;
             }
-            
-            ComboBox[] comboBox = { cbo_estado };            
+
+            ComboBox[] comboBox = {  };
             for (int i = 0; i < comboBox.Length; i++)
             {
                 comboBox[i].Enabled = false;
-            }            
+            }
         }
 
         private int validarTXT(TextBox[] list)
@@ -62,9 +59,10 @@ namespace Capa_Diseño_MRP.Mantenimientos
             {
                 txtBox[i].Text = "";
             }
-            
-            scampo = logic.siguiente("horasextras", "pkcodigohorasextras");
+
+            scampo = logic.siguiente("cuentas_contable", "pkcodigocuenta");
             txt_codigo.Text = scampo;
+            /*
             if (cbo_estado.Text != "")
             {
                 cbo_estado.Text = "Activo";
@@ -73,6 +71,7 @@ namespace Capa_Diseño_MRP.Mantenimientos
             {
                 cbo_estado.Text = "Inactico";
             }
+            */
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -85,7 +84,7 @@ namespace Capa_Diseño_MRP.Mantenimientos
             string ruta = "";
             string indice = "";
 
-            OdbcDataReader mostrarayuda = logic.consultaayuda("71");
+            OdbcDataReader mostrarayuda = logic.consultaayuda("70");
             try
             {
                 while (mostrarayuda.Read())
@@ -109,44 +108,40 @@ namespace Capa_Diseño_MRP.Mantenimientos
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
-            TextBox[] txtBox = { txt_codigo, txt_empleado, txt_cantidad, Txt_fechaHE };
+            TextBox[] txtBox = { txt_codigo, txt_nombre, txt_monto, Txt_DebeHaber };
             for (int i = 0; i < txtBox.Length; i++)
             {
                 txtBox[i].Enabled = true;
             }
-            ComboBox[] comboBox = { cbo_estado };
+            ComboBox[] comboBox = { };
             for (int i = 0; i < comboBox.Length; i++)
             {
                 comboBox[i].Enabled = true;
             }
             txt_codigo.Enabled = false;
-            Txt_fechaHE.Enabled = false;
-            
-            DateTime fechaHoy = DateTime.Now;
-            string fechaHE = fechaHoy.ToString("yyyy/MM/dd");
-            Txt_fechaHE.Text = fechaHE;
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            ComboBox[] comboBox = { cbo_estado };
-            TextBox[] txtBox = { txt_codigo, txt_empleado, txt_cantidad, Txt_fechaHE };
-            
+            ComboBox[] comboBox = { };
+            TextBox[] txtBox = { txt_codigo, txt_nombre, txt_monto, Txt_DebeHaber };
+
             if (validarTXT(txtBox) == 0)
                 return;
             else
             {
+                /*
                 if (cbo_estado.Text == "Activo")
                 {
                     cbo_estado.Text = "1";
                 }
                 else
                 {
-                    cbo_estado.Text = "0";
+                    cbo_estado.Text = "0";"cuentas_contable", "pkcodigocuenta"
                 }
-                
-                string[] valores = { "horasextras", txt_codigo.Text, txt_empleado.Text, txt_cantidad.Text, Txt_fechaHE.Text, cbo_estado.Text };
-                string[] campos = { "pkcodigohorasextras", "fkcodigoempleado", "cantidad", "fecha", "estado" };
+                */
+                string[] valores = { "cuentas_contable", txt_codigo.Text, txt_nombre.Text, txt_monto.Text, Txt_DebeHaber.Text };
+                string[] campos = { "pkcodigocuenta", "nombre_cuenta", "monto", "debe_haber" };
                 if (logic.Modificar(valores, campos) == null)
                     MessageBox.Show("Ocurrio un error al modificar los datos.");
                 else
@@ -160,13 +155,14 @@ namespace Capa_Diseño_MRP.Mantenimientos
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            TextBox[] txtBox = { txt_codigo, txt_empleado, txt_cantidad, Txt_fechaHE };
-            ComboBox[] comboBox = { cbo_estado };
-            
+            TextBox[] txtBox = { txt_codigo, txt_nombre, txt_monto, Txt_DebeHaber };
+            ComboBox[] comboBox = { };
+
             if (validarTXT(txtBox) == 0)
                 return;
             else
             {
+                /*
                 if (cbo_estado.Text == "Activo")
                 {
                     cbo_estado.Text = "1";
@@ -175,8 +171,8 @@ namespace Capa_Diseño_MRP.Mantenimientos
                 {
                     cbo_estado.Text = "0";
                 }
-                
-                string[] valores = { "horasextras", txt_codigo.Text, txt_empleado.Text, txt_cantidad.Text, Txt_fechaHE.Text, cbo_estado.Text };
+                */
+                string[] valores = { "cuentas_contable", txt_codigo.Text, txt_nombre.Text, txt_monto.Text, Txt_DebeHaber.Text };
                 if (logic.Insertar(valores) == null)
                     MessageBox.Show("Ocurrio un error al guardar los datos.");
                 else
@@ -190,10 +186,10 @@ namespace Capa_Diseño_MRP.Mantenimientos
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
-            ComboBox[] comboBox = { cbo_estado };
-            TextBox[] txtBox = { txt_codigo, txt_empleado, txt_cantidad, Txt_fechaHE };
-            
-            string[] valores = { "horasextras", txt_codigo.Text, "pkcodigohorasextras" };
+            ComboBox[] comboBox = { };
+            TextBox[] txtBox = { txt_codigo, txt_nombre, txt_monto, Txt_DebeHaber };
+
+            string[] valores = { "cuentas_contable", txt_codigo.Text, "pkcodigocuenta" };
             if (logic.Eliminar(valores) == null)
                 MessageBox.Show("Ocurrio un error al borrar los datos.");
             else
@@ -206,31 +202,20 @@ namespace Capa_Diseño_MRP.Mantenimientos
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            Consulta_HorasExtras ruta = new Consulta_HorasExtras();
+            Consulta_CuentasContables ruta = new Consulta_CuentasContables();
             ruta.ShowDialog();
 
             if (ruta.DialogResult == DialogResult.OK)
             {
-                txt_codigo.Text = ruta.Dgv_consultaHorasExtras.Rows[ruta.Dgv_consultaHorasExtras.CurrentRow.Index].
+                txt_codigo.Text = ruta.Dgv_consultaCuentasContables.Rows[ruta.Dgv_consultaCuentasContables.CurrentRow.Index].
                       Cells[0].Value.ToString();
-                txt_empleado.Text = ruta.Dgv_consultaHorasExtras.Rows[ruta.Dgv_consultaHorasExtras.CurrentRow.Index].
-                      Cells[1].Value.ToString();                
-                txt_cantidad.Text = ruta.Dgv_consultaHorasExtras.Rows[ruta.Dgv_consultaHorasExtras.CurrentRow.Index].
+                txt_nombre.Text = ruta.Dgv_consultaCuentasContables.Rows[ruta.Dgv_consultaCuentasContables.CurrentRow.Index].
+                      Cells[1].Value.ToString();
+                txt_monto.Text = ruta.Dgv_consultaCuentasContables.Rows[ruta.Dgv_consultaCuentasContables.CurrentRow.Index].
                       Cells[2].Value.ToString();
-                Txt_fechaHE.Text = ruta.Dgv_consultaHorasExtras.Rows[ruta.Dgv_consultaHorasExtras.CurrentRow.Index].
-                      Cells[3].Value.ToString();
-                cbo_estado.Text = ruta.Dgv_consultaHorasExtras.Rows[ruta.Dgv_consultaHorasExtras.CurrentRow.Index].
-                      Cells[4].Value.ToString();
+                Txt_DebeHaber.Text = ruta.Dgv_consultaCuentasContables.Rows[ruta.Dgv_consultaCuentasContables.CurrentRow.Index].
+                      Cells[3].Value.ToString();                
             }
-        }
-
-        private void btn_buscarE_Click(object sender, EventArgs e)
-        {
-            Consulta_Empleado ruta = new Consulta_Empleado();
-            ruta.ShowDialog(); 
-            txt_empleado.Text=ruta.Dgv_consultaEmpleado.Rows[ruta.Dgv_consultaEmpleado.CurrentRow.Index].
-                      Cells[0].Value.ToString();
-            txt_empleado.Enabled = false;
         }
     }
 }

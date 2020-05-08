@@ -23,6 +23,11 @@ namespace Capa_Logica_MRP
             return sn.insertarbitacora(sCodigo, sip, Smac, susuario, sdepartamento, sfechahora, saccion, sformulario);
         }
 
+        public OdbcDataReader consultaayuda(string id)
+        {
+            return sn.consultaayudas(id);
+        }
+
         public OdbcDataReader Insertar(string[] datos)
         {
             return sn.Insertar(datos);
@@ -41,6 +46,11 @@ namespace Capa_Logica_MRP
         public OdbcDataReader ConsultaHoraExtra()
         {
             return sn.consultarHoraExtra();
+        }
+
+        public OdbcDataReader ConsultaCuentasContables()
+        {
+            return sn.consultarCuentasContables();
         }
     }
 }
