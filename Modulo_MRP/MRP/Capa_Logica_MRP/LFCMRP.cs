@@ -56,7 +56,7 @@ namespace Capa_Logica_MRP
         {
             return sn.Insertarencabezado(pkidpolizaencabezado_MRP, fecha_inicio, fecha_fin, Descripcion);
         }
-        public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, string pkcodigocuenta, string debe, string haber)
+        public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, int pkcodigocuenta, string debe, string haber)
         {
             return sn.Insertardetalle(pkidpolizaencabezado_MRP, pkcodigocuenta, debe, haber);
         }

@@ -18,7 +18,9 @@ namespace Capa_Diseño_MRP.Consultas
         public Consulta_CuentasContables()
         {
             InitializeComponent();
+
             Dgv_consultaCuentasContables.Rows.Clear();
+            MostrarConsulta();
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)

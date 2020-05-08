@@ -75,7 +75,7 @@ namespace Capa_Datos_MRP
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT * FROM horasextras WHERE estado = 1 ;";
+                string consulta = "SELECT * FROM mydb.horasextras WHERE estado = '1' ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -272,7 +272,7 @@ namespace Capa_Datos_MRP
             }
 
 
-            public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, string pkcodigocuenta, string debe, string haber)
+            public OdbcDataReader Insertardetalle(string pkidpolizaencabezado_MRP, int pkcodigocuenta, string debe, string haber)
             {
                 try
                 {
@@ -316,7 +316,7 @@ namespace Capa_Datos_MRP
                 try
                 {
                     cn.conexionbd();
-                    string consulta = "insert into polizaencabezado_mrp values(" + pkidpolizaencabezado_MRP + ", '" + fecha_inicio + "' ,'" + fecha_fin + "','" + Descripcion + "','1');";
+                    string consulta = "insert into polizaencabezado_mrp values(" + pkidpolizaencabezado_MRP + ", '" + fecha_inicio + "' ,'" + fecha_fin + "','" + Descripcion + "','COSTOS','1');";
                     comm = new OdbcCommand(consulta, cn.conexionbd());
                     OdbcDataReader mostrar = comm.ExecuteReader();
                     return mostrar;

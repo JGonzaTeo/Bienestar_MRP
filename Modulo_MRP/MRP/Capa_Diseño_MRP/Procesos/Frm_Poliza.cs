@@ -269,7 +269,7 @@ namespace Capa_Diseño_MRP.Procesos
             foreach (DataGridViewRow row in Dgv_poliza.Rows)
             {
                 string numeroPoliza = Convert.ToString(Txt_numeropoliza.Text);
-                string codigo = Convert.ToString(row.Cells["Codigo"].Value);
+               int codigo = Convert.ToInt32(row.Cells["Codigo"].Value);
                 string debe = Convert.ToString(row.Cells["Debe"].Value);
                 string haber = Convert.ToString(row.Cells["Haber"].Value);
 
@@ -323,6 +323,29 @@ namespace Capa_Diseño_MRP.Procesos
         {
             Frm_MantCuentasContables hola = new Frm_MantCuentasContables();
            hola.Show();
+        }
+
+        private void btn_generar_Click_1(object sender, EventArgs e)
+        {
+            Guardar_Encabezado();
+            Guardar_detalle();
+            sumasiguales();
+            descativar();
+        }
+
+        private void btn_actualizar_Click_1(object sender, EventArgs e)
+        {
+            Dgv_poliza.Rows.Clear();
+            MateriaPrima();
+            suelds();
+            sueldos();
+            operaciones();
+            cuentas();
+            cuentas2();
+            sumasiguales();
+            txt_debe.Clear();
+            txt_haber.Clear();
+
         }
     }
 }

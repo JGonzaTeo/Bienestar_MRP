@@ -40,6 +40,11 @@
             this.LBLTOTAL = new System.Windows.Forms.Label();
             this.btn_ingresarCuenta = new System.Windows.Forms.Button();
             this.Gpb_Detallenominal = new System.Windows.Forms.GroupBox();
+            this.Dgv_poliza = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuentasContables = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtp_finalpoliza = new System.Windows.Forms.DateTimePicker();
             this.dtp_iniciopoliza = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,15 +57,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_generar = new System.Windows.Forms.Button();
-            this.Dgv_poliza = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CuentasContables = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             this.Gpb_Detallenominal.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_poliza)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_nombreForm
@@ -135,6 +135,7 @@
             this.btn_actualizar.TabIndex = 85;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click_1);
             // 
             // txt_haber
             // 
@@ -181,6 +182,39 @@
             this.Gpb_Detallenominal.TabIndex = 80;
             this.Gpb_Detallenominal.TabStop = false;
             this.Gpb_Detallenominal.Text = "Detalle";
+            // 
+            // Dgv_poliza
+            // 
+            this.Dgv_poliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_poliza.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.CuentasContables,
+            this.Debe,
+            this.Haber});
+            this.Dgv_poliza.Location = new System.Drawing.Point(26, 30);
+            this.Dgv_poliza.Name = "Dgv_poliza";
+            this.Dgv_poliza.Size = new System.Drawing.Size(390, 150);
+            this.Dgv_poliza.TabIndex = 0;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // CuentasContables
+            // 
+            this.CuentasContables.HeaderText = "CuentasContables";
+            this.CuentasContables.Name = "CuentasContables";
+            // 
+            // Debe
+            // 
+            this.Debe.HeaderText = "Debe";
+            this.Debe.Name = "Debe";
+            // 
+            // Haber
+            // 
+            this.Haber.HeaderText = "Haber";
+            this.Haber.Name = "Haber";
             // 
             // dtp_finalpoliza
             // 
@@ -308,39 +342,7 @@
             this.btn_generar.TabIndex = 86;
             this.btn_generar.Text = "Generar Póliza";
             this.btn_generar.UseVisualStyleBackColor = true;
-            // 
-            // Dgv_poliza
-            // 
-            this.Dgv_poliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_poliza.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.CuentasContables,
-            this.Debe,
-            this.Haber});
-            this.Dgv_poliza.Location = new System.Drawing.Point(5, 30);
-            this.Dgv_poliza.Name = "Dgv_poliza";
-            this.Dgv_poliza.Size = new System.Drawing.Size(390, 150);
-            this.Dgv_poliza.TabIndex = 0;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // CuentasContables
-            // 
-            this.CuentasContables.HeaderText = "CuentasContables";
-            this.CuentasContables.Name = "CuentasContables";
-            // 
-            // Debe
-            // 
-            this.Debe.HeaderText = "Debe";
-            this.Debe.Name = "Debe";
-            // 
-            // Haber
-            // 
-            this.Haber.HeaderText = "Haber";
-            this.Haber.Name = "Haber";
+            this.btn_generar.Click += new System.EventHandler(this.btn_generar_Click_1);
             // 
             // Frm_Poliza
             // 
@@ -363,9 +365,9 @@
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();
             this.Gpb_Detallenominal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_poliza)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_poliza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

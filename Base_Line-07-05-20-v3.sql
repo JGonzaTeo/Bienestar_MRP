@@ -1504,9 +1504,7 @@ CREATE TABLE `polizadetalle_mrp` (
   `haber` double DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`cod_linea`,`pkidpolizaencabezado_MRP`),
-  KEY `fk_polizadetalle_MRP_cuentas_contable1_idx` (`pkcodigocuenta`),
   KEY `fk_polizadetalle_mrp_polizaencabezado_mrp1_idx` (`pkidpolizaencabezado_MRP`),
-  CONSTRAINT `fk_polizadetalle_MRP_cuentas_contable1` FOREIGN KEY (`pkcodigocuenta`) REFERENCES `cuentas_contable` (`pkcodigocuenta`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_polizadetalle_mrp_polizaencabezado_mrp1` FOREIGN KEY (`pkidpolizaencabezado_MRP`) REFERENCES `polizaencabezado_mrp` (`pkidpolizaencabezado_MRP`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
