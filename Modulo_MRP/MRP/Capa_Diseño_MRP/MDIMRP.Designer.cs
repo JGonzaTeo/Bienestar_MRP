@@ -31,15 +31,20 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estandarDeCalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.costosDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_user = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.listaDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaCostosDeFabricacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,15 +73,49 @@
             // 
             // mantenToolStripMenuItem
             // 
+            this.mantenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estandarDeCalidadToolStripMenuItem,
+            this.estacionToolStripMenuItem,
+            this.gastosToolStripMenuItem});
             this.mantenToolStripMenuItem.Name = "mantenToolStripMenuItem";
             this.mantenToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.mantenToolStripMenuItem.Text = "Mantenimientos";
             // 
+            // estandarDeCalidadToolStripMenuItem
+            // 
+            this.estandarDeCalidadToolStripMenuItem.Name = "estandarDeCalidadToolStripMenuItem";
+            this.estandarDeCalidadToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.estandarDeCalidadToolStripMenuItem.Text = "Estandar de Calidad";
+            this.estandarDeCalidadToolStripMenuItem.Click += new System.EventHandler(this.EstandarDeCalidadToolStripMenuItem_Click);
+            // 
+            // estacionToolStripMenuItem
+            // 
+            this.estacionToolStripMenuItem.Name = "estacionToolStripMenuItem";
+            this.estacionToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.estacionToolStripMenuItem.Text = "Estacion";
+            this.estacionToolStripMenuItem.Click += new System.EventHandler(this.EstacionToolStripMenuItem_Click);
+            // 
+            // gastosToolStripMenuItem
+            // 
+            this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.gastosToolStripMenuItem.Text = "Gastos";
+            this.gastosToolStripMenuItem.Click += new System.EventHandler(this.GastosToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.costosDeProduccionToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // costosDeProduccionToolStripMenuItem
+            // 
+            this.costosDeProduccionToolStripMenuItem.Name = "costosDeProduccionToolStripMenuItem";
+            this.costosDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.costosDeProduccionToolStripMenuItem.Text = "Costos de Produccion";
+            this.costosDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.CostosDeProduccionToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -86,8 +125,17 @@
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
+            // listaDePedidosToolStripMenuItem
+            // 
+            this.listaDePedidosToolStripMenuItem.Name = "listaDePedidosToolStripMenuItem";
+            this.listaDePedidosToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.listaDePedidosToolStripMenuItem.Text = "Lista de pedidos";
+            this.listaDePedidosToolStripMenuItem.Click += new System.EventHandler(this.ListaDePedidosToolStripMenuItem_Click);
+            // 
             // herramientasToolStripMenuItem
             // 
+            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaCostosDeFabricacionToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
@@ -134,12 +182,12 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
-            // listaDePedidosToolStripMenuItem
+            // consultaCostosDeFabricacionToolStripMenuItem
             // 
-            this.listaDePedidosToolStripMenuItem.Name = "listaDePedidosToolStripMenuItem";
-            this.listaDePedidosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.listaDePedidosToolStripMenuItem.Text = "Lista de pedidos";
-            this.listaDePedidosToolStripMenuItem.Click += new System.EventHandler(this.ListaDePedidosToolStripMenuItem_Click);
+            this.consultaCostosDeFabricacionToolStripMenuItem.Name = "consultaCostosDeFabricacionToolStripMenuItem";
+            this.consultaCostosDeFabricacionToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.consultaCostosDeFabricacionToolStripMenuItem.Text = "Consulta Costos de Produccion";
+            this.consultaCostosDeFabricacionToolStripMenuItem.Click += new System.EventHandler(this.ConsultaCostosDeFabricacionToolStripMenuItem_Click);
             // 
             // MDIMRP
             // 
@@ -178,6 +226,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripMenuItem listaDePedidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estandarDeCalidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem costosDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaCostosDeFabricacionToolStripMenuItem;
     }
 }
 

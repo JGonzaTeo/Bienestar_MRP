@@ -49,11 +49,47 @@
     <Compile Include="Consultas\Consulta_pedidos.Designer.cs">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\Frm_Mantprueba.cs">
+    <Compile Include="Consultas\Frm_Consulta_Costos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\Frm_Mantprueba.Designer.cs">
-      <DependentUpon>Frm_Mantprueba.cs</DependentUpon>
+    <Compile Include="Consultas\Frm_Consulta_Costos.Designer.cs">
+      <DependentUpon>Frm_Consulta_Costos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_Estacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_Estacion.Designer.cs">
+      <DependentUpon>Frm_Consulta_Estacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_EstandarCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_EstandarCalidad.Designer.cs">
+      <DependentUpon>Frm_Consulta_EstandarCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_Consulta_Gastos.Designer.cs">
+      <DependentUpon>Frm_Consulta_Gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_Estacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_Estacion.Designer.cs">
+      <DependentUpon>Frm_Mant_Estacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_EstandarCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_EstandarCalidad.Designer.cs">
+      <DependentUpon>Frm_Mant_EstandarCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_Mant_Gastos.Designer.cs">
+      <DependentUpon>Frm_Mant_Gastos.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIMRP.cs">
       <SubType>Form</SubType>
@@ -67,13 +103,13 @@
     <Compile Include="Procesos\FrmOrden_Produccion.Designer.cs">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\Rpt_prueba.cs">
+    <Compile Include="Procesos\Frm_Costos_Produccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Rpt_prueba.Designer.cs">
-      <DependentUpon>Rpt_prueba.cs</DependentUpon>
+    <Compile Include="Procesos\Frm_Costos_Produccion.Designer.cs">
+      <DependentUpon>Frm_Costos_Produccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Logica_MRP\Capa_Logica_MRP.csproj">
@@ -81,16 +117,42 @@
       <Name>Capa_Logica_MRP</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Consultas\Consulta_pedidos.resx">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_Consulta_Costos.resx">
+      <DependentUpon>Frm_Consulta_Costos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_Consulta_Estacion.resx">
+      <DependentUpon>Frm_Consulta_Estacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_Consulta_EstandarCalidad.resx">
+      <DependentUpon>Frm_Consulta_EstandarCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_Consulta_Gastos.resx">
+      <DependentUpon>Frm_Consulta_Gastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_Mant_Estacion.resx">
+      <DependentUpon>Frm_Mant_Estacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_Mant_EstandarCalidad.resx">
+      <DependentUpon>Frm_Mant_EstandarCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_Mant_Gastos.resx">
+      <DependentUpon>Frm_Mant_Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIMRP.resx">
       <DependentUpon>MDIMRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\FrmOrden_Produccion.resx">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Costos_Produccion.resx">
+      <DependentUpon>Frm_Costos_Produccion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
