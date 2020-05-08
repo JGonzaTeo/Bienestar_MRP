@@ -22,7 +22,6 @@ namespace Capa_Diseño_MRP.Procesos
         string materiap;
 
         public Frm_Poliza()
-
         {
             InitializeComponent();
             Txt_numeropoliza.Text = logic.siguiente("mydb.polizadetalle_mrp", "pkidpolizaencabezado_MRP");
@@ -34,9 +33,6 @@ namespace Capa_Diseño_MRP.Procesos
             cuentas();
             cuentas2();
             sumasiguales();
-
-
-
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -46,36 +42,41 @@ namespace Capa_Diseño_MRP.Procesos
 
         private void btn_Ayuda_Click(object sender, EventArgs e)
         {
+            string ruta = "";
+            string indice = "";
 
+            OdbcDataReader mostrarayuda = logic.consultaayuda("72");
+            try
+            {
+                while (mostrarayuda.Read())
+                {
+                    ruta = mostrarayuda.GetString(1);
+                    indice = mostrarayuda.GetString(2);
+                }
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+
+            Help.ShowHelp(this, ruta, indice);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
+
         public void operaciones()
         {
-
             int montohora;
 
             montohora = int.Parse(horas_extras) * 15;
             sueldo = int.Parse(sueldobase) + montohora;
 
-
-
-
-
             Dgv_poliza.Rows.Add("001", "SUELDOS ", sueldo.ToString(), "");
-
-
-
-
-
-
-
-
-
         }
+
         public void suelds()
         {
             OdbcDataReader desplegar = logic.horasextras();
@@ -83,21 +84,15 @@ namespace Capa_Diseño_MRP.Procesos
             {
                 while (desplegar.Read())
                 {
-
                     horas_extras = desplegar.GetString(0);
-
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
         }
+
         public void descativar()
         {
             if (txt_debe.Text != "")
@@ -106,6 +101,7 @@ namespace Capa_Diseño_MRP.Procesos
                 btn_ingresarCuenta.Visible = false;
             }
         }
+
         public void sumasiguales()
         {
             OdbcDataReader desplegar = logic.iguales(Txt_numeropoliza.Text);
@@ -113,25 +109,16 @@ namespace Capa_Diseño_MRP.Procesos
             {
                 while (desplegar.Read())
                 {
-
                     txt_debe.Text = desplegar.GetString(0);
                     txt_haber.Text = desplegar.GetString(0);
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
-
-
-
-
         }
+
         public void cuentas2()
         {
             Dgv_poliza.Rows.Add("020", "BANCOS", "", sueldo.ToString());
@@ -142,161 +129,96 @@ namespace Capa_Diseño_MRP.Procesos
             {
                 while (mostrar.Read())
                 {
-
-
                     Dgv_poliza.Rows.Add(mostrar.GetString(0), mostrar.GetString(1) + " POR PAGAR", "", mostrar.GetString(2));
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
-
-
-
         }
-
 
         public void cuentas()
         {
-
             OdbcDataReader mostrar = logic.mostrarcuenta();
             try
             {
                 while (mostrar.Read())
                 {
-
-
                     Dgv_poliza.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2));
-
-
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
-
-
-
         }
+
         public void sueldos()
         {
-
             OdbcDataReader mostrar = logic.sueldobase();
             try
             {
                 while (mostrar.Read())
                 {
-
                     sueldobase = mostrar.GetString(0);
-
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
-
-
-
         }
+
         public void MateriaPrima()
         {
-
             OdbcDataReader mostrar = logic.materiaprima();
             try
             {
                 while (mostrar.Read())
                 {
-
-
                     Dgv_poliza.Rows.Add("010", "Materia Prima", mostrar.GetString(0), "");
 
                     materiap = mostrar.GetString(0);
-
                 }
-
-
-
             }
             catch (Exception err)
             {
                 Console.WriteLine(err.Message);
             }
-
-
-
-
         }
-        public void Guardar_Encabezado()
 
+        public void Guardar_Encabezado()
         {
             string numeroPoliza = Convert.ToString(Txt_numeropoliza.Text);
             string TipoPoliza = Convert.ToString(Txt_tipo.Text);
             string Descripcion = Convert.ToString(txt_descripcion.Text);
 
-
             string fechaInicio = dtp_iniciopoliza.Value.ToString("yyyy-MM-dd");
             string fechaFin = dtp_finalpoliza.Value.ToString("yyyy-MM-dd");
 
-
-
             OdbcDataReader insertar = logic.Insertarencabezado(numeroPoliza, fechaInicio, fechaFin, Descripcion);
-
-
-
         }
 
         public void Guardar_detalle()
-
         {
             foreach (DataGridViewRow row in Dgv_poliza.Rows)
             {
                 string numeroPoliza = Convert.ToString(Txt_numeropoliza.Text);
-               int codigo = Convert.ToInt32(row.Cells["Codigo"].Value);
+                int codigo = Convert.ToInt32(row.Cells["Codigo"].Value);
                 string debe = Convert.ToString(row.Cells["Debe"].Value);
                 string haber = Convert.ToString(row.Cells["Haber"].Value);
 
                 OdbcDataReader insertar = logic.Insertardetalle(numeroPoliza, codigo, debe, haber);
-
-
-
             }
-
-
-
-
-
-
-
         }
+
         private void btn_generar_Click(object sender, EventArgs e)
         {
             Guardar_Encabezado();
             Guardar_detalle();
             sumasiguales();
             descativar();
-        }
-
-        private void Dgv_poliza_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -311,18 +233,12 @@ namespace Capa_Diseño_MRP.Procesos
             sumasiguales();
             txt_debe.Clear();
             txt_haber.Clear();
-
-        }
-
-        private void btn_ingresarCuenta_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_ingresarCuenta_Click_1(object sender, EventArgs e)
         {
             Frm_MantCuentasContables hola = new Frm_MantCuentasContables();
-           hola.Show();
+            hola.Show();
         }
 
         private void btn_generar_Click_1(object sender, EventArgs e)
@@ -345,7 +261,6 @@ namespace Capa_Diseño_MRP.Procesos
             sumasiguales();
             txt_debe.Clear();
             txt_haber.Clear();
-
         }
     }
 }

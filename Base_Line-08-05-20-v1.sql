@@ -96,7 +96,7 @@ CREATE TABLE `ayuda` (
 
 LOCK TABLES `ayuda` WRITE;
 /*!40000 ALTER TABLE `ayuda` DISABLE KEYS */;
-INSERT INTO `ayuda` VALUES (1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html');
+INSERT INTO `ayuda` VALUES (1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html'),(1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html');
 /*!40000 ALTER TABLE `ayuda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -819,6 +819,7 @@ CREATE TABLE `gastos_indirectos` (
   `pkidgastos_indirectos` int(11) NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `valor` double DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidgastos_indirectos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -981,9 +982,9 @@ CREATE TABLE `maestroactivos` (
   `pkidmaestroactivos` int(11) NOT NULL,
   `pkidProducto` int(11) DEFAULT NULL,
   `existencia_actual` double DEFAULT NULL,
-  `estado` tinyint(2) DEFAULT NULL,
   `stock_minimo` double DEFAULT NULL,
   `stock_maximo` double DEFAULT NULL,
+  `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidmaestroactivos`),
   KEY `fk_maestroactivos_producto1_idx` (`pkidProducto`),
   CONSTRAINT `fk_maestroactivos_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -2274,4 +2275,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-07 11:11:22
+-- Dump completed on 2020-05-08  0:16:26
