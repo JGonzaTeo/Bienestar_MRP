@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantCuentasContables));
-            this.Txt_DebeHaber = new System.Windows.Forms.TextBox();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_monto = new System.Windows.Forms.TextBox();
@@ -47,15 +46,9 @@
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.lbl_mantenimientoCuentasContables = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.cbo_DebeHaber = new System.Windows.Forms.ComboBox();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Txt_DebeHaber
-            // 
-            this.Txt_DebeHaber.Location = new System.Drawing.Point(220, 308);
-            this.Txt_DebeHaber.Name = "Txt_DebeHaber";
-            this.Txt_DebeHaber.Size = new System.Drawing.Size(172, 20);
-            this.Txt_DebeHaber.TabIndex = 126;
             // 
             // lbl_fecha
             // 
@@ -286,12 +279,23 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // cbo_DebeHaber
+            // 
+            this.cbo_DebeHaber.FormattingEnabled = true;
+            this.cbo_DebeHaber.Items.AddRange(new object[] {
+            "Debe",
+            "Haber"});
+            this.cbo_DebeHaber.Location = new System.Drawing.Point(220, 308);
+            this.cbo_DebeHaber.Name = "cbo_DebeHaber";
+            this.cbo_DebeHaber.Size = new System.Drawing.Size(172, 21);
+            this.cbo_DebeHaber.TabIndex = 127;
+            // 
             // Frm_MantCuentasContables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 348);
-            this.Controls.Add(this.Txt_DebeHaber);
+            this.Controls.Add(this.cbo_DebeHaber);
             this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_monto);
@@ -317,8 +321,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox Txt_DebeHaber;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_monto;
@@ -336,5 +338,6 @@
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Label lbl_mantenimientoCuentasContables;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.ComboBox cbo_DebeHaber;
     }
 }
