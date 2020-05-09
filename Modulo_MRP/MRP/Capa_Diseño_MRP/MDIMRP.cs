@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Diseño_MRP.Mantenimientos;
+using Capa_Diseño_MRP.Procesos;
 
 namespace Capa_Diseño_MRP
 {
@@ -133,6 +135,107 @@ namespace Capa_Diseño_MRP
             else
             {
                 listaproductos.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaBodegaInterna = false;
+        Frm_MantBodegaInterna bodega = new Frm_MantBodegaInterna();
+
+        private void BodegaInternaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantBodegaInterna);
+            if (ventanaBodegaInterna == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    bodega = new Frm_MantBodegaInterna();
+                }
+
+                bodega.MdiParent = this;
+                bodega.Show();
+                Application.DoEvents();
+                ventanaBodegaInterna = true;
+            }
+            else
+            {
+                bodega.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        
+
+        private void BodegaInternaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        bool ventanaSolicitud = false;
+        Frm_SolicitudCompra solicitud = new Frm_SolicitudCompra();
+
+        private void SolicitudDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_SolicitudCompra);
+            if (ventanaSolicitud == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    solicitud = new Frm_SolicitudCompra();
+                }
+
+                solicitud.MdiParent = this;
+                solicitud.Show();
+                Application.DoEvents();
+                ventanaSolicitud = true;
+            }
+            else
+            {
+                solicitud.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaGraficas = false;
+        Frm_GraficoActivos graficas = new Frm_GraficoActivos();
+        private void graficaDeActivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_GraficoActivos);
+            if (ventanaGraficas == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    graficas = new Frm_GraficoActivos();
+                }
+
+                graficas.MdiParent = this;
+                graficas.Show();
+                Application.DoEvents();
+                ventanaGraficas = true;
+            }
+            else
+            {
+                graficas.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaProduccion = false;
+        Frm_SeleccionPedido produccion = new Frm_SeleccionPedido();
+        private void detalleProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_SeleccionPedido);
+            if (ventanaProduccion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    produccion = new Frm_SeleccionPedido();
+                }
+
+                produccion.MdiParent = this;
+                produccion.Show();
+                Application.DoEvents();
+                ventanaProduccion = true;
+            }
+            else
+            {
+                produccion.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }

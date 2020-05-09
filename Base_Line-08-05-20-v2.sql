@@ -96,7 +96,7 @@ CREATE TABLE `ayuda` (
 
 LOCK TABLES `ayuda` WRITE;
 /*!40000 ALTER TABLE `ayuda` DISABLE KEYS */;
-INSERT INTO `ayuda` VALUES (1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html');
+INSERT INTO `ayuda` VALUES (1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html'),(1,'Página web ayuda/ayuda.chm','menu.html'),(2,'Página web ayuda/ayuda.chm','Menúboletos.html');
 /*!40000 ALTER TABLE `ayuda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -819,6 +819,7 @@ CREATE TABLE `gastos_indirectos` (
   `pkidgastos_indirectos` int(11) NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `valor` double DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidgastos_indirectos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -981,9 +982,9 @@ CREATE TABLE `maestroactivos` (
   `pkidmaestroactivos` int(11) NOT NULL,
   `pkidProducto` int(11) DEFAULT NULL,
   `existencia_actual` double DEFAULT NULL,
-  `estado` tinyint(2) DEFAULT NULL,
   `stock_minimo` double DEFAULT NULL,
   `stock_maximo` double DEFAULT NULL,
+  `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidmaestroactivos`),
   KEY `fk_maestroactivos_producto1_idx` (`pkidProducto`),
   CONSTRAINT `fk_maestroactivos_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1035,12 +1036,14 @@ DROP TABLE IF EXISTS `merma`;
 CREATE TABLE `merma` (
   `pkidmerma` int(11) NOT NULL,
   `pkidtipomerma` int(11) DEFAULT NULL,
-  `producto_merma` int(11) DEFAULT NULL,
+  `pkidProducto` int(11) DEFAULT NULL,
   `cantidad` double DEFAULT NULL,
   `valor` double DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidmerma`),
   KEY `fk_merma_tipomerma1_idx` (`pkidtipomerma`),
+  KEY `fk_merma_producto1_idx` (`pkidProducto`),
+  CONSTRAINT `fk_merma_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_merma_tipomerma1` FOREIGN KEY (`pkidtipomerma`) REFERENCES `tipomerma` (`pkidtipomerma`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1504,9 +1507,7 @@ CREATE TABLE `polizadetalle_mrp` (
   `haber` double DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`cod_linea`,`pkidpolizaencabezado_MRP`),
-  KEY `fk_polizadetalle_MRP_cuentas_contable1_idx` (`pkcodigocuenta`),
   KEY `fk_polizadetalle_mrp_polizaencabezado_mrp1_idx` (`pkidpolizaencabezado_MRP`),
-  CONSTRAINT `fk_polizadetalle_MRP_cuentas_contable1` FOREIGN KEY (`pkcodigocuenta`) REFERENCES `cuentas_contable` (`pkcodigocuenta`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_polizadetalle_mrp_polizaencabezado_mrp1` FOREIGN KEY (`pkidpolizaencabezado_MRP`) REFERENCES `polizaencabezado_mrp` (`pkidpolizaencabezado_MRP`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2276,4 +2277,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-07 11:11:22
+-- Dump completed on 2020-05-08 17:17:51
