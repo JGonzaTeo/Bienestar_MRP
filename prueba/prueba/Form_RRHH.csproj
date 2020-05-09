@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Capa_Diseño_MRP">
-      <HintPath>..\..\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.dll</HintPath>
+    <Reference Include="Capa_Diseño_MRP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Modulo_MRP\MRP\Capa_Diseño_MRP\bin\Debug\Capa_Diseño_MRP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
