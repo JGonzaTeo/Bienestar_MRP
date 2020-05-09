@@ -1036,12 +1036,14 @@ DROP TABLE IF EXISTS `merma`;
 CREATE TABLE `merma` (
   `pkidmerma` int(11) NOT NULL,
   `pkidtipomerma` int(11) DEFAULT NULL,
-  `producto_merma` int(11) DEFAULT NULL,
+  `pkidProducto` int(11) DEFAULT NULL,
   `cantidad` double DEFAULT NULL,
   `valor` double DEFAULT NULL,
   `estado` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`pkidmerma`),
   KEY `fk_merma_tipomerma1_idx` (`pkidtipomerma`),
+  KEY `fk_merma_producto1_idx` (`pkidProducto`),
+  CONSTRAINT `fk_merma_producto1` FOREIGN KEY (`pkidProducto`) REFERENCES `producto` (`pkidProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_merma_tipomerma1` FOREIGN KEY (`pkidtipomerma`) REFERENCES `tipomerma` (`pkidtipomerma`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2275,4 +2277,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-08  0:16:26
+-- Dump completed on 2020-05-08 17:17:51
