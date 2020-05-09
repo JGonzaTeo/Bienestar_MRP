@@ -16,9 +16,9 @@ namespace Capa_Diseño_MRP.Procesos
     public partial class Frm_Poliza : Form
     {
         LFCMRP logic = new LFCMRP();
-        string sueldobase;
-        string horas_extras;
-        int sueldo;
+        string sueldobase = "0";
+        string horas_extras = "0";
+        int sueldo = 0;
         string materiap;
 
         public Frm_Poliza()
@@ -70,13 +70,11 @@ namespace Capa_Diseño_MRP.Procesos
         public void operaciones()
         {
             int montohora;
-
             montohora = int.Parse(horas_extras) * 15;
             sueldo = int.Parse(sueldobase) + montohora;
-
             Dgv_poliza.Rows.Add("001", "SUELDOS ", sueldo.ToString(), "");
         }
-
+        
         public void suelds()
         {
             OdbcDataReader desplegar = logic.horasextras();
@@ -178,7 +176,6 @@ namespace Capa_Diseño_MRP.Procesos
                 while (mostrar.Read())
                 {
                     Dgv_poliza.Rows.Add("010", "Materia Prima", mostrar.GetString(0), "");
-
                     materiap = mostrar.GetString(0);
                 }
             }
@@ -193,10 +190,8 @@ namespace Capa_Diseño_MRP.Procesos
             string numeroPoliza = Convert.ToString(Txt_numeropoliza.Text);
             string TipoPoliza = Convert.ToString(Txt_tipo.Text);
             string Descripcion = Convert.ToString(txt_descripcion.Text);
-
             string fechaInicio = dtp_iniciopoliza.Value.ToString("yyyy-MM-dd");
             string fechaFin = dtp_finalpoliza.Value.ToString("yyyy-MM-dd");
-
             OdbcDataReader insertar = logic.Insertarencabezado(numeroPoliza, fechaInicio, fechaFin, Descripcion);
         }
 
@@ -220,7 +215,7 @@ namespace Capa_Diseño_MRP.Procesos
             sumasiguales();
             descativar();
         }
-
+        
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             Dgv_poliza.Rows.Clear();
@@ -234,7 +229,7 @@ namespace Capa_Diseño_MRP.Procesos
             txt_debe.Clear();
             txt_haber.Clear();
         }
-
+       
         private void btn_ingresarCuenta_Click_1(object sender, EventArgs e)
         {
             Frm_MantCuentasContables hola = new Frm_MantCuentasContables();
