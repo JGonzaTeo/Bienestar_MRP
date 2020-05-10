@@ -16,7 +16,9 @@ namespace Capa_Diseño_MRP.Mantenimientos
     public partial class Frm_MantCuentasContables : Form
     {
         LFCMRP logic = new LFCMRP();
+        Validaciones val = new Validaciones();
         string scampo;
+
         public Frm_MantCuentasContables()
         {
             InitializeComponent();
@@ -213,6 +215,16 @@ namespace Capa_Diseño_MRP.Mantenimientos
                 cbo_DebeHaber.Text = ruta.Dgv_consultaCuentasContables.Rows[ruta.Dgv_consultaCuentasContables.CurrentRow.Index].
                       Cells[3].Value.ToString();                
             }
+        }
+
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.CamposLetras(e);
+        }
+
+        private void txt_monto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.CamposNumericos(e);
         }
     }
 }

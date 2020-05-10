@@ -16,10 +16,11 @@ namespace Capa_Diseño_MRP.Procesos
     public partial class Frm_Poliza : Form
     {
         LFCMRP logic = new LFCMRP();
+        Validaciones val = new Validaciones();
         string sueldobase = "0";
         string horas_extras = "0";
         int sueldo = 0;
-        string materiap;
+        string materiap = "0";
 
         public Frm_Poliza()
         {
@@ -91,7 +92,7 @@ namespace Capa_Diseño_MRP.Procesos
             }
         }
 
-        public void descativar()
+        public void desactivar()
         {
             if (txt_debe.Text != "")
             {
@@ -208,28 +209,6 @@ namespace Capa_Diseño_MRP.Procesos
             }
         }
 
-        private void btn_generar_Click(object sender, EventArgs e)
-        {
-            Guardar_Encabezado();
-            Guardar_detalle();
-            sumasiguales();
-            descativar();
-        }
-        
-        private void btn_actualizar_Click(object sender, EventArgs e)
-        {
-            Dgv_poliza.Rows.Clear();
-            MateriaPrima();
-            suelds();
-            sueldos();
-            operaciones();
-            cuentas();
-            cuentas2();
-            sumasiguales();
-            txt_debe.Clear();
-            txt_haber.Clear();
-        }
-       
         private void btn_ingresarCuenta_Click_1(object sender, EventArgs e)
         {
             Frm_MantCuentasContables hola = new Frm_MantCuentasContables();
@@ -241,7 +220,7 @@ namespace Capa_Diseño_MRP.Procesos
             Guardar_Encabezado();
             Guardar_detalle();
             sumasiguales();
-            descativar();
+            desactivar();
         }
 
         private void btn_actualizar_Click_1(object sender, EventArgs e)
@@ -256,6 +235,16 @@ namespace Capa_Diseño_MRP.Procesos
             sumasiguales();
             txt_debe.Clear();
             txt_haber.Clear();
+        }
+
+        private void txt_descripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.CamposNumerosYLetras(e);
+        }
+
+        private void txt_debe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.CamposNumericos(e);
         }
     }
 }

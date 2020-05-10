@@ -41,6 +41,10 @@
             this.btn_ingresarCuenta = new System.Windows.Forms.Button();
             this.Gpb_Detallenominal = new System.Windows.Forms.GroupBox();
             this.Dgv_poliza = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuentasContables = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtp_finalpoliza = new System.Windows.Forms.DateTimePicker();
             this.dtp_iniciopoliza = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,10 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_generar = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CuentasContables = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             this.Gpb_Detallenominal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_poliza)).BeginInit();
@@ -139,17 +139,23 @@
             // 
             // txt_haber
             // 
+            this.txt_haber.Enabled = false;
+            this.txt_haber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_haber.Location = new System.Drawing.Point(319, 451);
             this.txt_haber.Name = "txt_haber";
             this.txt_haber.Size = new System.Drawing.Size(100, 20);
             this.txt_haber.TabIndex = 84;
+            this.txt_haber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_debe_KeyPress);
             // 
             // txt_debe
             // 
+            this.txt_debe.Enabled = false;
+            this.txt_debe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_debe.Location = new System.Drawing.Point(189, 451);
             this.txt_debe.Name = "txt_debe";
             this.txt_debe.Size = new System.Drawing.Size(100, 20);
             this.txt_debe.TabIndex = 83;
+            this.txt_debe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_debe_KeyPress);
             // 
             // LBLTOTAL
             // 
@@ -196,6 +202,26 @@
             this.Dgv_poliza.RowHeadersVisible = false;
             this.Dgv_poliza.Size = new System.Drawing.Size(406, 150);
             this.Dgv_poliza.TabIndex = 0;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // CuentasContables
+            // 
+            this.CuentasContables.HeaderText = "Cuentas Contables";
+            this.CuentasContables.Name = "CuentasContables";
+            // 
+            // Debe
+            // 
+            this.Debe.HeaderText = "Debe";
+            this.Debe.Name = "Debe";
+            // 
+            // Haber
+            // 
+            this.Haber.HeaderText = "Haber";
+            this.Haber.Name = "Haber";
             // 
             // dtp_finalpoliza
             // 
@@ -265,6 +291,7 @@
             this.txt_descripcion.Size = new System.Drawing.Size(187, 82);
             this.txt_descripcion.TabIndex = 41;
             this.txt_descripcion.UseWaitCursor = true;
+            this.txt_descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_KeyPress);
             // 
             // lbl_descripcion
             // 
@@ -324,26 +351,6 @@
             this.btn_generar.Text = "Generar Póliza";
             this.btn_generar.UseVisualStyleBackColor = true;
             this.btn_generar.Click += new System.EventHandler(this.btn_generar_Click_1);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // CuentasContables
-            // 
-            this.CuentasContables.HeaderText = "Cuentas Contables";
-            this.CuentasContables.Name = "CuentasContables";
-            // 
-            // Debe
-            // 
-            this.Debe.HeaderText = "Debe";
-            this.Debe.Name = "Debe";
-            // 
-            // Haber
-            // 
-            this.Haber.HeaderText = "Haber";
-            this.Haber.Name = "Haber";
             // 
             // Frm_Poliza
             // 
