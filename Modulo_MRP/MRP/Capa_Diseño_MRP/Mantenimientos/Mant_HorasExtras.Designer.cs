@@ -144,6 +144,7 @@
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(172, 20);
             this.txt_cantidad.TabIndex = 98;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             // 
             // label3
             // 
@@ -156,7 +157,6 @@
             // 
             // txt_empleado
             // 
-            this.txt_empleado.Enabled = false;
             this.txt_empleado.Location = new System.Drawing.Point(220, 231);
             this.txt_empleado.Name = "txt_empleado";
             this.txt_empleado.Size = new System.Drawing.Size(172, 20);

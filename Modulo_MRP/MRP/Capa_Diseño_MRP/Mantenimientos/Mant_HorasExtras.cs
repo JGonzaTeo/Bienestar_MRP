@@ -16,7 +16,9 @@ namespace Capa_Diseño_MRP.Mantenimientos
     public partial class Mant_HorasExtras : Form
     {
         LFCMRP logic = new LFCMRP();
+        Validaciones val = new Validaciones();
         string scampo;
+
         public Mant_HorasExtras()
         {
             InitializeComponent();
@@ -121,6 +123,7 @@ namespace Capa_Diseño_MRP.Mantenimientos
             }
             txt_codigo.Enabled = false;
             Txt_fechaHE.Enabled = false;
+            txt_empleado.Enabled = false;
             
             DateTime fechaHoy = DateTime.Now;
             string fechaHE = fechaHoy.ToString("yyyy/MM/dd");
@@ -231,6 +234,11 @@ namespace Capa_Diseño_MRP.Mantenimientos
             txt_empleado.Text=ruta.Dgv_consultaEmpleado.Rows[ruta.Dgv_consultaEmpleado.CurrentRow.Index].
                       Cells[0].Value.ToString();
             txt_empleado.Enabled = false;
+        }
+
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.CamposNumericos(e);
         }
     }
 }
