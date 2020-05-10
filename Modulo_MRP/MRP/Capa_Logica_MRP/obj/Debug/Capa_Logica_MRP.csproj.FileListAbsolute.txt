@@ -16,3 +16,11 @@ C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Logica_M
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.csproj.CopyComplete
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.dll
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.pdb
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\bin\Debug\Capa_Logica_MRP.dll
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\bin\Debug\Capa_Logica_MRP.pdb
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.csproj.CopyComplete
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.dll
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Logica_MRP\obj\Debug\Capa_Logica_MRP.pdb

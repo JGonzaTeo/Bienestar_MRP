@@ -49,6 +49,54 @@
     <Compile Include="Consultas\Consulta_pedidos.Designer.cs">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\Frm_ConsultaEncabezadoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_ConsultaEncabezadoProduccion.Designer.cs">
+      <DependentUpon>Frm_ConsultaEncabezadoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormula.Designer.cs">
+      <DependentUpon>Frm_consultaFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormulaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormulaDetalle.Designer.cs">
+      <DependentUpon>Frm_consultaFormulaDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_ConsultaMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_ConsultaMateriaPrima.Designer.cs">
+      <DependentUpon>Frm_ConsultaMateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaMerma.Designer.cs">
+      <DependentUpon>Frm_consultaMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaProcesoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaProcesoProduccion.Designer.cs">
+      <DependentUpon>Frm_consultaProcesoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaProductoTerminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaProductoTerminado.Designer.cs">
+      <DependentUpon>Frm_consultaProductoTerminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaTipoMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaTipoMerma.Designer.cs">
+      <DependentUpon>Frm_consultaTipoMerma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\Frm_Consulta_Costos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +120,30 @@
     </Compile>
     <Compile Include="Consultas\Frm_Consulta_Gastos.Designer.cs">
       <DependentUpon>Frm_Consulta_Gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantFormula.Designer.cs">
+      <DependentUpon>Frm_MantFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMerma.Designer.cs">
+      <DependentUpon>Frm_MantMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantProductoFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantProductoFormula.Designer.cs">
+      <DependentUpon>Frm_MantProductoFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoMerma.Designer.cs">
+      <DependentUpon>Frm_MantTipoMerma.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Frm_Mant_Estacion.cs">
       <SubType>Form</SubType>
@@ -103,6 +175,18 @@
     <Compile Include="Procesos\FrmOrden_Produccion.Designer.cs">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_AsignacionEstacionPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_AsignacionEstacionPedido.Designer.cs">
+      <DependentUpon>Frm_AsignacionEstacionPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_ControlCalidadProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_ControlCalidadProducto.Designer.cs">
+      <DependentUpon>Frm_ControlCalidadProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_Costos_Produccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +208,30 @@
     <EmbeddedResource Include="Consultas\Consulta_pedidos.resx">
       <DependentUpon>Consulta_pedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_ConsultaEncabezadoProduccion.resx">
+      <DependentUpon>Frm_ConsultaEncabezadoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaFormula.resx">
+      <DependentUpon>Frm_consultaFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaFormulaDetalle.resx">
+      <DependentUpon>Frm_consultaFormulaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_ConsultaMateriaPrima.resx">
+      <DependentUpon>Frm_ConsultaMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaMerma.resx">
+      <DependentUpon>Frm_consultaMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaProcesoProduccion.resx">
+      <DependentUpon>Frm_consultaProcesoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaProductoTerminado.resx">
+      <DependentUpon>Frm_consultaProductoTerminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaTipoMerma.resx">
+      <DependentUpon>Frm_consultaTipoMerma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Frm_Consulta_Costos.resx">
       <DependentUpon>Frm_Consulta_Costos.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +243,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Frm_Consulta_Gastos.resx">
       <DependentUpon>Frm_Consulta_Gastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantFormula.resx">
+      <DependentUpon>Frm_MantFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantMerma.resx">
+      <DependentUpon>Frm_MantMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantProductoFormula.resx">
+      <DependentUpon>Frm_MantProductoFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantTipoMerma.resx">
+      <DependentUpon>Frm_MantTipoMerma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_Mant_Estacion.resx">
       <DependentUpon>Frm_Mant_Estacion.cs</DependentUpon>
@@ -150,6 +270,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\FrmOrden_Produccion.resx">
       <DependentUpon>FrmOrden_Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_AsignacionEstacionPedido.resx">
+      <DependentUpon>Frm_AsignacionEstacionPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_ControlCalidadProducto.resx">
+      <DependentUpon>Frm_ControlCalidadProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Costos_Produccion.resx">
       <DependentUpon>Frm_Costos_Produccion.cs</DependentUpon>

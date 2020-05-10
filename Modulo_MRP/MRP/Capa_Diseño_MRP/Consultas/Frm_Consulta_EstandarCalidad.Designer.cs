@@ -32,13 +32,13 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.Btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_actualizar.Location = new System.Drawing.Point(938, 250);
+            this.Btn_actualizar.Location = new System.Drawing.Point(934, 239);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(164, 41);
@@ -68,7 +68,7 @@
             this.Btn_seleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_seleccionar.Location = new System.Drawing.Point(1121, 250);
+            this.Btn_seleccionar.Location = new System.Drawing.Point(1117, 239);
             this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_seleccionar.Name = "Btn_seleccionar";
             this.Btn_seleccionar.Size = new System.Drawing.Size(164, 41);
@@ -89,7 +89,7 @@
             this.cod,
             this.nom,
             this.Column1});
-            this.Dgv_consulta.Location = new System.Drawing.Point(34, 115);
+            this.Dgv_consulta.Location = new System.Drawing.Point(30, 104);
             this.Dgv_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_consulta.Name = "Dgv_consulta";
             this.Dgv_consulta.ReadOnly = true;
@@ -100,16 +100,37 @@
             this.Dgv_consulta.Size = new System.Drawing.Size(888, 297);
             this.Dgv_consulta.TabIndex = 104;
             // 
+            // cod
+            // 
+            this.cod.HeaderText = "COD";
+            this.cod.MinimumWidth = 6;
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            // 
+            // nom
+            // 
+            this.nom.HeaderText = "Categoria";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Descripcion";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // Pnl_nombreForm
             // 
             this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(157)))), ((int)(((byte)(250)))));
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lbl_titulo);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(2, 11);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(-2, 0);
             this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(1293, 63);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(1314, 63);
             this.Pnl_nombreForm.TabIndex = 103;
             // 
             // btn_minimizar
@@ -117,7 +138,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(1123, 15);
+            this.btn_minimizar.Location = new System.Drawing.Point(1183, 15);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
@@ -148,27 +169,6 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
-            // 
-            // cod
-            // 
-            this.cod.HeaderText = "COD";
-            this.cod.MinimumWidth = 6;
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Categoria";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descripcion";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // Frm_Consulta_EstandarCalidad
             // 
