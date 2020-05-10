@@ -16,6 +16,7 @@ namespace Capa_Diseño_MRP
     public partial class MDIMRP : Form
     {
         private int childFormNumber = 0;
+        string susuario = "usuario";
 
         public MDIMRP()
         {
@@ -251,6 +252,139 @@ namespace Capa_Diseño_MRP
             else
             {
                 Cproduccion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool mantFormula = false;
+        Frm_MantFormula mantformula = new Frm_MantFormula("");
+        private void formulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantFormula);
+            if (mantFormula == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mantformula = new Frm_MantFormula(susuario);
+                }
+
+                mantformula.MdiParent = this;
+                mantformula.Show();
+                Application.DoEvents();
+                mantFormula = true;
+            }
+            else
+            {
+                mantformula.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool mantMerma = false;
+        Frm_MantMerma mantmerma = new Frm_MantMerma("");
+        private void mermaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantMerma);
+            if (mantMerma == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mantmerma = new Frm_MantMerma(susuario);
+                }
+
+                mantmerma.MdiParent = this;
+                mantmerma.Show();
+                Application.DoEvents();
+                mantMerma = true;
+            }
+            else
+            {
+                mantmerma.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool mantTipoMerma = false;
+        Frm_MantTipoMerma manttipomerma = new Frm_MantTipoMerma("");
+        private void tipoMermaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantTipoMerma);
+            if (mantTipoMerma == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    manttipomerma = new Frm_MantTipoMerma(susuario);
+                }
+
+                manttipomerma.MdiParent = this;
+                manttipomerma.Show();
+                Application.DoEvents();
+                mantTipoMerma = true;
+            }
+            else
+            {
+                manttipomerma.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool mantComponentes = false;
+        Frm_MantProductoFormula mantcomponentes = new Frm_MantProductoFormula("");
+        private void componentesDeFormulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantProductoFormula);
+            if (mantComponentes == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mantcomponentes = new Frm_MantProductoFormula(susuario);
+                }
+
+                mantcomponentes.MdiParent = this;
+                mantcomponentes.Show();
+                Application.DoEvents();
+                mantComponentes = true;
+            }
+            else
+            {
+                mantcomponentes.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool procesoCalidadProducto = false;
+        Frm_ControlCalidadProducto procesocalidadproducto = new Frm_ControlCalidadProducto("");
+        private void controlDeCalidadEnProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_ControlCalidadProducto);
+            if (mantComponentes == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    procesocalidadproducto = new Frm_ControlCalidadProducto(susuario);
+                }
+
+                procesocalidadproducto.MdiParent = this;
+                procesocalidadproducto.Show();
+                Application.DoEvents();
+                procesoCalidadProducto = true;
+            }
+            else
+            {
+                procesocalidadproducto.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+        bool procesoAsignacionEstacion = false;
+        Frm_AsignacionEstacionPedido procesoasignacionestacion = new Frm_AsignacionEstacionPedido("");
+        private void asignacionDeEstacionAProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_AsignacionEstacionPedido);
+            if (mantComponentes == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    procesoasignacionestacion = new Frm_AsignacionEstacionPedido(susuario);
+                }
+
+                procesoasignacionestacion.MdiParent = this;
+                procesoasignacionestacion.Show();
+                Application.DoEvents();
+                procesoAsignacionEstacion = true;
+            }
+            else
+            {
+                procesoasignacionestacion.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }

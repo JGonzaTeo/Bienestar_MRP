@@ -10,3 +10,7 @@ C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MR
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.dll
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.pdb
 C:\Users\Angel Solares\Desktop\Bienestar_MRP-master\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.dll
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\bin\Debug\Capa_Datos_MRP.pdb
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.dll
+C:\Users\Paula V\Desktop\Modulo_MRP\MRP\Capa_Datos_MRP\obj\Debug\Capa_Datos_MRP.pdb

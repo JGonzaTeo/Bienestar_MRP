@@ -12,6 +12,41 @@ namespace Capa_Datos_MRP
         Conexion cn = new Conexion();
         OdbcCommand comm;
         //--------------------------------------------------------------------Metodo General--------------------------------------------------------------------//
+
+        public OdbcDataReader insertarbitacora(string sCodigo, string sip, string Smac, string susuario, string sdepartamento, string sfechahora, string saccion, string sformulario)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into bitacora values(" + sCodigo + ", '" + sip + "', '" + Smac + "' ,'" + susuario + "','" + sdepartamento + "','" + sfechahora + "','" + saccion + "','" + sformulario + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader consultaayudas(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consultaGraAsis = " select * from ayudas where pkcodigoayuda =" + id + ";";
+                comm = new OdbcCommand(consultaGraAsis, cn.conexionbd());
+                OdbcDataReader mostrarResultados = comm.ExecuteReader();
+                return mostrarResultados;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
         public string obtenerfinal(string tabla, string campo)
         {
             String camporesultante = "";
@@ -258,5 +293,435 @@ namespace Capa_Datos_MRP
             }
 
         }
+
+        //--Paulis
+        //---------------------------------------------------------------------------------MODIFICAR-TIPOMERMA-------------------------------------------------------------------------------
+        public OdbcDataReader modificartipomerma(string scodigo, string snombre, string sdescripcion, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE tipomerma set nombre='" + snombre + "',descripcion='" + sdescripcion + "',estado='" + sestado + "' where pkidtipomerma='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------INSERTAR-TIPOMERMA-------------------------------------------------------------------------------
+        public OdbcDataReader insertartipomerma(string scodigo, string snombre, string sdescripcion, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into tipomerma values(" + scodigo + ", '" + snombre + "' ,'" + sdescripcion + "','" + sestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------ELIMINAR-TIPOMERMA------------------------------------------------------------------------------
+        public OdbcDataReader eliminartipomerma(string scodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE tipomerma set estado='0' where pkidtipomerma='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-TIPOMERMA-------------------------------------------------------------------------------
+        public OdbcDataReader consultartipomerma()
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM tipomerma WHERE estado = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------MODIFICAR-MERMA-------------------------------------------------------------------------------
+        public OdbcDataReader modificarmerma(string scodigo, string stipomerma, string sproducto, double dcantidad, double dvalor, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE merma set pkidtipomerma='" + stipomerma + "',pkidProducto='" + sproducto + "',cantidad='" + dcantidad + "',valor='" + dvalor + "',estado='" + sestado + "' where pkidmerma='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------INSERTAR-MERMA-------------------------------------------------------------------------------
+        public OdbcDataReader insertarmerma(string scodigo, string stipomerma, string sproducto, double dcantidad, double dvalor, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into merma values(" + scodigo + ", '" + stipomerma + "' ,'" + sproducto + "','" + dcantidad + "','" + dvalor + "','" + sestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------ELIMINAR-MERMA------------------------------------------------------------------------------
+        public OdbcDataReader eliminarmerma(string scodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE merma set estado='0' where pkidmerma='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-MERMA-------------------------------------------------------------------------------
+        public OdbcDataReader consultarmerma()
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM merma WHERE estado = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------MODIFICAR-FORMULA-------------------------------------------------------------------------------
+        public OdbcDataReader modificarformulaencabezado(string scodigo, string snombre, string sdescripcion, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE formula_encabezado set pkidProducto='" + snombre + "',descripcion='" + sdescripcion + "',estado='" + sestado + "' where pkidformulaencabezado='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------INSERTAR-FORMULA-------------------------------------------------------------------------------
+        public OdbcDataReader insertarformulaencabezado(string scodigo, string snombre, string sdescripcion, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into formula_encabezado values(" + scodigo + ", '" + snombre + "' ,'" + sdescripcion + "','" + sestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------ELIMINAR-FORMULA------------------------------------------------------------------------------
+        public OdbcDataReader eliminarformulaencabezado(string scodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE formula_encabezado set estado='0' where pkidformulaencabezado='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-FORMULA-------------------------------------------------------------------------------
+        public OdbcDataReader consultarformulaencabezado()
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM formula_encabezado WHERE estado = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-FORMULADETALLE1-------------------------------------------------------------------------------
+        public OdbcDataReader consultarformuladetalle(string codigoencabezado)
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM formula_detalle WHERE estado = " + campo + " AND pkidformulaencabezado= " + codigoencabezado + ";", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------MODIFICAR-FORMULADETALLE-------------------------------------------------------------------------------
+        public OdbcDataReader modificarformuladetalle(string scodigoformula, string scodigo, string smateria, double dcantidad, string smedida, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE formula_detalle set pkidformulaencabezado='" + scodigoformula + "',pkidproducto='" + smateria + "',cantidad='" + dcantidad + "',medida='" + smedida + "',estado='" + sestado + "' where linea='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------INSERTAR-FORMULADETALLE-------------------------------------------------------------------------------
+        public OdbcDataReader insertarformuladetalle(string scodigoformula, string scodigo, string smateria, double dcantidad, string smedida, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into formula_detalle values(" + scodigoformula + ", '" + scodigo + "' ,'" + smateria + "','" + dcantidad + "','" + smedida + "','" + sestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------ELIMINAR-FORMULADETALLE------------------------------------------------------------------------------
+        public OdbcDataReader eliminarformuladetalle(string scodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE formula_detalle set estado='0' where linea='" + scodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-FORMULADETALLE-------------------------------------------------------------------------------
+        public OdbcDataReader consultarformuladet()
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM formula_detalle WHERE estado = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------INSERTAR-ESTACION A PRODUCCION-------------------------------------------------------------------------------
+        public OdbcDataReader insertarprocesoproduccion( string sproduccion, string sestacion)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into procesoproduccion values( '" + sproduccion + "' ,'" + sestacion + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-ASIGNACION-------------------------------------------------------------------------------
+        public OdbcDataReader consultarasignacion()
+        {
+            int campo = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM procesoproduccion WHERE estado = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-MATERIA PRIMA-------------------------------------------------------------------------------
+        public OdbcDataReader consultarmateriaprima()
+        {
+            int campo = 1;
+            int tipoproducto = 1;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM producto WHERE estado = " + campo + " AND pktipo_producto = " + tipoproducto + ";", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-PRODUCTO TERMINADO-------------------------------------------------------------------------------
+        public OdbcDataReader consultarproductoterminado()
+        {
+            int campo = 1;
+            int tipoproducto = 2;
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM producto WHERE estado = " + campo + " AND pktipo_producto = " + tipoproducto + ";", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------CONSULTAR-PROCESO PRODUCCION-------------------------------------------------------------------------------
+        public OdbcDataReader consultarprocesoproduccion()
+        {
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM procesoproduccion ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        //---------------------------------------------------------------------------------INSERTAR-CONTROL CALIDAD A PRODUCTO-------------------------------------------------------------------------------
+        public OdbcDataReader insertarproductocontrolcalidad( string sproduccion, string sestandar, string sdescripcion, string sestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into producto_control_calidad values(" + sproduccion + ", '" + sestandar + "' ,'" + sdescripcion + "','" + sestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader consultarproduccion()
+        {
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM encabezado_produccion where estado = 1 ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+
     }
 }
