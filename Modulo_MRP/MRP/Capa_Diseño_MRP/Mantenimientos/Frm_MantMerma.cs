@@ -18,6 +18,7 @@ namespace Capa_Diseño_MRP.Mantenimientos
     public partial class Frm_MantMerma : Form
     {
         LAPMRP logic = new LAPMRP();
+        Validaciones v = new Validaciones();
         string scampo;
         string slocalIP;
         string smacAddresses;
@@ -186,12 +187,12 @@ namespace Capa_Diseño_MRP.Mantenimientos
 
         private void Txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            v.Camposdecimales(e);
         }
 
         private void Txt_valor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            v.Camposdecimales(e);
         }
 
         private void Btn_consultarProducto_Click(object sender, EventArgs e)
