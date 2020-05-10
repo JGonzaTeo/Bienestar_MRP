@@ -19,7 +19,7 @@ namespace Capa_Diseño_MRP.Mantenimientos
     {
 
         LAPMRP logic = new LAPMRP();
-
+        Validaciones v = new Validaciones();
         string scampo;
         string slocalIP;
         string smacAddresses;
@@ -340,6 +340,11 @@ namespace Capa_Diseño_MRP.Mantenimientos
                     Btn_seleccionar.Enabled = true;
                 }
             }
+        }
+
+        private void Txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.Camposdecimales(e);
         }
     }
 }

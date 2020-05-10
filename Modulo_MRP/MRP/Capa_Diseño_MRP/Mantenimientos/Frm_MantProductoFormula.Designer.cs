@@ -40,6 +40,13 @@
             this.Lbl_codigoformula = new System.Windows.Forms.Label();
             this.Txt_codigoformula = new System.Windows.Forms.TextBox();
             this.gpb_componentes = new System.Windows.Forms.GroupBox();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
+            this.Btn_modificar = new System.Windows.Forms.Button();
+            this.Btn_cancelar = new System.Windows.Forms.Button();
+            this.Btn_seleccionar = new System.Windows.Forms.Button();
+            this.Txt_codigodetalle = new System.Windows.Forms.TextBox();
+            this.Lbl_codigocomponente = new System.Windows.Forms.Label();
             this.Dgv_consultaFormulaDetalle = new System.Windows.Forms.DataGridView();
             this.Formula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,13 +63,6 @@
             this.Lbl_cantidad = new System.Windows.Forms.Label();
             this.Txt_materiaprima = new System.Windows.Forms.TextBox();
             this.Txt_cantidad = new System.Windows.Forms.TextBox();
-            this.Lbl_codigocomponente = new System.Windows.Forms.Label();
-            this.Txt_codigodetalle = new System.Windows.Forms.TextBox();
-            this.Btn_modificar = new System.Windows.Forms.Button();
-            this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.Btn_guardar = new System.Windows.Forms.Button();
-            this.Btn_cancelar = new System.Windows.Forms.Button();
-            this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Pnl_nombreForm.SuspendLayout();
             this.gpb_formula.SuspendLayout();
             this.gpb_componentes.SuspendLayout();
@@ -150,7 +150,7 @@
             // btn_agregaringredientes
             // 
             this.btn_agregaringredientes.Location = new System.Drawing.Point(643, 57);
-            this.btn_agregaringredientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_agregaringredientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregaringredientes.Name = "btn_agregaringredientes";
             this.btn_agregaringredientes.Size = new System.Drawing.Size(188, 41);
             this.btn_agregaringredientes.TabIndex = 141;
@@ -162,7 +162,7 @@
             // 
             this.Btn_buscarformula.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscarformula.Image")));
             this.Btn_buscarformula.Location = new System.Drawing.Point(452, 51);
-            this.Btn_buscarformula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscarformula.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscarformula.Name = "Btn_buscarformula";
             this.Btn_buscarformula.Size = new System.Drawing.Size(72, 52);
             this.Btn_buscarformula.TabIndex = 140;
@@ -206,14 +206,86 @@
             this.gpb_componentes.Controls.Add(this.Txt_materiaprima);
             this.gpb_componentes.Controls.Add(this.Txt_cantidad);
             this.gpb_componentes.Location = new System.Drawing.Point(47, 287);
-            this.gpb_componentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpb_componentes.Margin = new System.Windows.Forms.Padding(4);
             this.gpb_componentes.Name = "gpb_componentes";
-            this.gpb_componentes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpb_componentes.Padding = new System.Windows.Forms.Padding(4);
             this.gpb_componentes.Size = new System.Drawing.Size(918, 494);
             this.gpb_componentes.TabIndex = 118;
             this.gpb_componentes.TabStop = false;
             this.gpb_componentes.Text = "Componentes";
             this.gpb_componentes.Enter += new System.EventHandler(this.gpb_componentes_Enter);
+            // 
+            // Btn_guardar
+            // 
+            this.Btn_guardar.Location = new System.Drawing.Point(731, 69);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(100, 28);
+            this.Btn_guardar.TabIndex = 152;
+            this.Btn_guardar.Text = "Guardar";
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // Btn_eliminar
+            // 
+            this.Btn_eliminar.Location = new System.Drawing.Point(731, 141);
+            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(100, 28);
+            this.Btn_eliminar.TabIndex = 151;
+            this.Btn_eliminar.Text = "Eliminar";
+            this.Btn_eliminar.UseVisualStyleBackColor = true;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
+            // 
+            // Btn_modificar
+            // 
+            this.Btn_modificar.Location = new System.Drawing.Point(731, 105);
+            this.Btn_modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_modificar.Name = "Btn_modificar";
+            this.Btn_modificar.Size = new System.Drawing.Size(100, 28);
+            this.Btn_modificar.TabIndex = 150;
+            this.Btn_modificar.Text = "Modificar";
+            this.Btn_modificar.UseVisualStyleBackColor = true;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
+            // 
+            // Btn_cancelar
+            // 
+            this.Btn_cancelar.Location = new System.Drawing.Point(776, 374);
+            this.Btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_cancelar.Name = "Btn_cancelar";
+            this.Btn_cancelar.Size = new System.Drawing.Size(100, 28);
+            this.Btn_cancelar.TabIndex = 149;
+            this.Btn_cancelar.Text = "Cancelar";
+            this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
+            // 
+            // Btn_seleccionar
+            // 
+            this.Btn_seleccionar.Location = new System.Drawing.Point(776, 324);
+            this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_seleccionar.Name = "Btn_seleccionar";
+            this.Btn_seleccionar.Size = new System.Drawing.Size(100, 28);
+            this.Btn_seleccionar.TabIndex = 148;
+            this.Btn_seleccionar.Text = "Seleccionar";
+            this.Btn_seleccionar.UseVisualStyleBackColor = true;
+            this.Btn_seleccionar.Click += new System.EventHandler(this.Btn_seleccionar_Click);
+            // 
+            // Txt_codigodetalle
+            // 
+            this.Txt_codigodetalle.Location = new System.Drawing.Point(151, 87);
+            this.Txt_codigodetalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_codigodetalle.Name = "Txt_codigodetalle";
+            this.Txt_codigodetalle.Size = new System.Drawing.Size(99, 22);
+            this.Txt_codigodetalle.TabIndex = 147;
+            // 
+            // Lbl_codigocomponente
+            // 
+            this.Lbl_codigocomponente.AutoSize = true;
+            this.Lbl_codigocomponente.Location = new System.Drawing.Point(79, 87);
+            this.Lbl_codigocomponente.Name = "Lbl_codigocomponente";
+            this.Lbl_codigocomponente.Size = new System.Drawing.Size(52, 17);
+            this.Lbl_codigocomponente.TabIndex = 146;
+            this.Lbl_codigocomponente.Text = "Codigo";
             // 
             // Dgv_consultaFormulaDetalle
             // 
@@ -285,7 +357,7 @@
             // Btn_borrar
             // 
             this.Btn_borrar.Location = new System.Drawing.Point(731, 177);
-            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_borrar.Name = "Btn_borrar";
             this.Btn_borrar.Size = new System.Drawing.Size(100, 28);
             this.Btn_borrar.TabIndex = 144;
@@ -296,7 +368,7 @@
             // Btn_agregar
             // 
             this.Btn_agregar.Location = new System.Drawing.Point(731, 33);
-            this.Btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(100, 28);
             this.Btn_agregar.TabIndex = 143;
@@ -333,7 +405,7 @@
             // 
             this.Btn_buscarMateriaPrima.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscarMateriaPrima.Image")));
             this.Btn_buscarMateriaPrima.Location = new System.Drawing.Point(587, 67);
-            this.Btn_buscarMateriaPrima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscarMateriaPrima.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscarMateriaPrima.Name = "Btn_buscarMateriaPrima";
             this.Btn_buscarMateriaPrima.Size = new System.Drawing.Size(72, 52);
             this.Btn_buscarMateriaPrima.TabIndex = 140;
@@ -373,78 +445,7 @@
             this.Txt_cantidad.Name = "Txt_cantidad";
             this.Txt_cantidad.Size = new System.Drawing.Size(99, 22);
             this.Txt_cantidad.TabIndex = 139;
-            // 
-            // Lbl_codigocomponente
-            // 
-            this.Lbl_codigocomponente.AutoSize = true;
-            this.Lbl_codigocomponente.Location = new System.Drawing.Point(79, 87);
-            this.Lbl_codigocomponente.Name = "Lbl_codigocomponente";
-            this.Lbl_codigocomponente.Size = new System.Drawing.Size(52, 17);
-            this.Lbl_codigocomponente.TabIndex = 146;
-            this.Lbl_codigocomponente.Text = "Codigo";
-            // 
-            // Txt_codigodetalle
-            // 
-            this.Txt_codigodetalle.Location = new System.Drawing.Point(151, 87);
-            this.Txt_codigodetalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txt_codigodetalle.Name = "Txt_codigodetalle";
-            this.Txt_codigodetalle.Size = new System.Drawing.Size(99, 22);
-            this.Txt_codigodetalle.TabIndex = 147;
-            // 
-            // Btn_modificar
-            // 
-            this.Btn_modificar.Location = new System.Drawing.Point(731, 105);
-            this.Btn_modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_modificar.Name = "Btn_modificar";
-            this.Btn_modificar.Size = new System.Drawing.Size(100, 28);
-            this.Btn_modificar.TabIndex = 150;
-            this.Btn_modificar.Text = "Modificar";
-            this.Btn_modificar.UseVisualStyleBackColor = true;
-            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
-            // 
-            // Btn_eliminar
-            // 
-            this.Btn_eliminar.Location = new System.Drawing.Point(731, 141);
-            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_eliminar.Name = "Btn_eliminar";
-            this.Btn_eliminar.Size = new System.Drawing.Size(100, 28);
-            this.Btn_eliminar.TabIndex = 151;
-            this.Btn_eliminar.Text = "Eliminar";
-            this.Btn_eliminar.UseVisualStyleBackColor = true;
-            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
-            // 
-            // Btn_guardar
-            // 
-            this.Btn_guardar.Location = new System.Drawing.Point(731, 69);
-            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_guardar.Name = "Btn_guardar";
-            this.Btn_guardar.Size = new System.Drawing.Size(100, 28);
-            this.Btn_guardar.TabIndex = 152;
-            this.Btn_guardar.Text = "Guardar";
-            this.Btn_guardar.UseVisualStyleBackColor = true;
-            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
-            // 
-            // Btn_cancelar
-            // 
-            this.Btn_cancelar.Location = new System.Drawing.Point(776, 374);
-            this.Btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_cancelar.Name = "Btn_cancelar";
-            this.Btn_cancelar.Size = new System.Drawing.Size(100, 28);
-            this.Btn_cancelar.TabIndex = 149;
-            this.Btn_cancelar.Text = "Cancelar";
-            this.Btn_cancelar.UseVisualStyleBackColor = true;
-            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
-            // 
-            // Btn_seleccionar
-            // 
-            this.Btn_seleccionar.Location = new System.Drawing.Point(776, 324);
-            this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_seleccionar.Name = "Btn_seleccionar";
-            this.Btn_seleccionar.Size = new System.Drawing.Size(100, 28);
-            this.Btn_seleccionar.TabIndex = 148;
-            this.Btn_seleccionar.Text = "Seleccionar";
-            this.Btn_seleccionar.UseVisualStyleBackColor = true;
-            this.Btn_seleccionar.Click += new System.EventHandler(this.Btn_seleccionar_Click);
+            this.Txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_cantidad_KeyPress);
             // 
             // Frm_MantProductoFormula
             // 
@@ -455,7 +456,7 @@
             this.Controls.Add(this.gpb_formula);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_MantProductoFormula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantProductoFormula";
